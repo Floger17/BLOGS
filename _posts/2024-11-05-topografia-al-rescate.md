@@ -1,3 +1,5 @@
+<style> /* Justifica todos los párrafos y listas del artículo */ main p, main ul, main ol { text-align: justify; } /* Mantiene el pie de foto centrado */ figcaption { text-align: center !important; } </style>
+
 # TOPOGRAFÍA AL RESCATE
 
 Tras los trágicos acontecimientos a causa de la DANA del 29 de octubre de 2024 en Valencia. Creo que es interesante explicar cómo se puede cartografiar este fenómeno con tan graves consecuencias para el pueblo valenciano, y como valenciano y estudiante de Ingeniería Geomática y Topografía, siento la obligación moral de exponer qué se ha hecho desde el campo de la geomática y la topografía para dar explicación técnica y objetiva a lo sucedido y cómo la topografía puede dar respuestas a estas cuestiones.
