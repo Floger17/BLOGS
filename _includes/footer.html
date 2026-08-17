@@ -5,24 +5,28 @@
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-    <div class="footer-col-wrapper">
-      <!-- Ampliamos la columna 1 para que entre el texto completo -->
-      <div class="footer-col footer-col-1" style="width: 45%;">
-        <ul class="contact-list">
-          <li><strong>{{ site.author | escape }}</strong></li>
-          <li><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
-          <li><em>Precolegiado Nº PR00205</em></li>
+    <!-- Flexbox para alinear perfectamente la parte superior de las columnas -->
+    <div class="footer-col-wrapper" style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;">
+      
+      <!-- Columna 1: Tu información -->
+      <div class="footer-col footer-col-1" style="flex: 1 1 50%; max-width: 55%; margin: 0; padding-right: 20px;">
+        <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
+          <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
+          <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
+          <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2" style="width: 15%;">
+      <!-- Columna 2: Redes del tema (si las hay) -->
+      <div class="footer-col footer-col-2" style="margin: 0;">
         {%- include social.html -%}
       </div>
 
-      <!-- Ajustamos la columna 3 proporcionalmente -->
-      <div class="footer-col footer-col-3" style="width: 35%;">
-        <p>{{ site.description | escape }}</p>
+      <!-- Columna 3: Descripción del sitio -->
+      <div class="footer-col footer-col-3" style="flex: 1 1 40%; max-width: 40%; margin: 0;">
+        <p style="margin: 0;">{{ site.description | escape }}</p>
       </div>
+
     </div>
 
   </div>
