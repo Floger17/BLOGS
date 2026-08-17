@@ -71,8 +71,8 @@ Y a su vez, un profesor mío, y director del CGAT, y quien fue el segundo perito
 
 En lineas generales estoy muy agradecido a los vecinos por su hospitalidad y amabilidad.
 
-## Reflexiones personales
-# La DANA
+# Reflexiones personales
+## La DANA
 Mis reflexiones, tras lo sucedido de la DANA y mis aportaciones técnicos al proyecto sobre la DANA son muy claras. 
 
 La primera de ellas es que la DANA ha hecho mucho daño a los valencianos, y es una herida aun latente, se buscan responsables, como es obvio, pero lo que realmente deberíamos preguntarnos como valencianos es: "*¿Por qué no se han realizado obras hidráulicas tenido en cuenta que el territorio valenciano es proclive a estas riadas?*" Porque tenemos experiencias como la riada del 57, o la Pantanà' de Tous del 82, o los testimonios recogidos por el valenciano Antonio José Cavanilles y Palop de 1766, y como las innumerables riadas que el territorio valenciano ha sufrido y que valencianos dejaron testimonio de estos sucesos. Es decir, el territorio valenciano es propensa a recibir este tipo de fenómenos que ocurren cada ciertos años. ¿Por qué no se han hecho obras en la rambla del Poyo sabiendo la virulencia de ésta?
