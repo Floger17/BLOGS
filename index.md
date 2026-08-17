@@ -40,7 +40,7 @@ title: Inicio
 <div class="social-icons-grid">
 
   <!-- 1. LINKEDIN -->
-  <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" title="Perfil Profesional en LinkedIn" class="social-icon-link">
+  <a href="[https://www.linkedin.com/in/tu-perfil](https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/)" target="_blank" title="Perfil Profesional en LinkedIn" class="social-icon-link">
     <img src="{{ '/assets/img/linkedin.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
   </a>
 
@@ -50,7 +50,7 @@ title: Inicio
   </a>
 
   <!-- 3. PRECOLEGIADO / VÍNCULO PROFESIONAL (Icono neutro de topografía) -->
-  <a href="https://www.coigt.com/" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
+  <a href="[https://www.coigt.com/](https://www.coigt.com/profesional/PR00205 )" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
     <img src="{{ '/assets/img/topography.png' | relative_url }}" alt="Precolegiado COIGT" class="social-icon-img">
   </a>
 
