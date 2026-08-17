@@ -3,18 +3,25 @@ layout: home
 title: Inicio
 ---
 
-/* Contenedor de iconos al final de la página */
+<!-- PRESENTACIÓN CON NEGRITA Y CURSIVA -->
+<p>
+  <strong>Fabio Regolf Ariño</strong><br>
+  <em>Estudiante de Ingeniería Geomática y Topografía<br>
+  Precolegiado Nº PR00205</em>
+</p>
+
+<!-- ESTILOS DE LOS ICONOS -->
+<style>
 .social-icons-grid {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
-  margin-top: 2.5rem;    /* Espacio respecto al contenido de arriba */
-  margin-bottom: 1.5rem; /* Margen inferior de cortesía */
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
-/* Enlace individual */
 .social-icon-link {
   display: inline-flex;
   align-items: center;
@@ -22,14 +29,12 @@ title: Inicio
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-/* Altura fija idéntica para todos los logos */
 .social-icon-img {
   height: 38px !important;
   width: auto !important;
   object-fit: contain;
 }
 
-/* Efecto hover al pasar el ratón */
 .social-icon-link:hover {
   transform: scale(1.2);
   filter: brightness(1.2);
@@ -40,7 +45,7 @@ title: Inicio
 <div class="social-icons-grid">
 
   <!-- 1. LINKEDIN -->
-  <a href="[https://www.linkedin.com/in/tu-perfil](https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/)" target="_blank" title="Perfil Profesional en LinkedIn" class="social-icon-link">
+  <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="Perfil Profesional en LinkedIn" class="social-icon-link">
     <img src="{{ '/assets/img/linkedin.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
   </a>
 
@@ -49,12 +54,12 @@ title: Inicio
     <img src="{{ '/assets/img/github.png' | relative_url }}" alt="GitHub" class="social-icon-img">
   </a>
 
-  <!-- 3. PRECOLEGIADO / VÍNCULO PROFESIONAL (Icono neutro de topografía) -->
-  <a href="[https://www.coigt.com/](https://www.coigt.com/profesional/PR00205 )" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
+  <!-- 3. PRECOLEGIADO COIGT -->
+  <a href="https://www.coigt.com/profesional/PR00205" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
     <img src="{{ '/assets/img/topography.png' | relative_url }}" alt="Precolegiado COIGT" class="social-icon-img">
   </a>
 
-  <!-- 4. INSTAGRAM (Opcional) -->
+  <!-- 4. INSTAGRAM -->
   <a href="https://www.instagram.com/tu-usuario" target="_blank" title="Instagram" class="social-icon-link">
     <img src="{{ '/assets/img/instagram.png' | relative_url }}" alt="Instagram" class="social-icon-img">
   </a>
