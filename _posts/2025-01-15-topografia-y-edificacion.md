@@ -1,3 +1,15 @@
+<style>
+/* Justifica todos los párrafos y listas del artículo */
+main p, main ul, main ol {
+  text-align: justify;
+}
+
+/* Mantiene el pie de foto centrado */
+figcaption {
+  text-align: center !important;
+}
+</style>
+
 Cuando se habla de “Edificación” se suele asociar a arquitectos diseñando planos, a ingenieros de obras públicas calculando las estructuras, peones trabajando de sol a sol. No obstante, muy pocas veces se reconoce que, antes de colocar el primer ladrillo, antes de hacer cualquier movimiento de tierras y excavaciones de cualquier terreno, el topógrafo ya ha estado allí, indicando con precisión milimétrica por dónde se tiene que excavar, por dónde van los pilares, las tuberías… con el noble fin de garantizar que el anclaje de todos sus elementos de la obra y actuaciones estén situados correctamente.
 Pero, en muchas ocasiones, nuestra labor pasa desapercibida para muchos, ya sea por ignorancia o desconocimiento, algunas personas de otras ingenierías pueden vernos por encima del hombre, o tratarnos como a unos simples peones de la obra por llevar un chaleco y casco y un aparatejo extraño que no saben exactamente de lo que es capaz de ofrecer al topógrafo, y por estar presentes antes y durante las obras.
 
