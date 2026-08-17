@@ -6,19 +6,21 @@
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <!-- Ampliamos la columna 1 para que entre el texto completo -->
+      <div class="footer-col footer-col-1" style="width: 45%;">
         <ul class="contact-list">
           <li><strong>{{ site.author | escape }}</strong></li>
-          <li><em>Estudiante de Ingeniería Geomática y Topografía</em></li>
+          <li><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
           <li><em>Precolegiado Nº PR00205</em></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="footer-col footer-col-2" style="width: 15%;">
         {%- include social.html -%}
       </div>
 
-      <div class="footer-col footer-col-3">
+      <!-- Ajustamos la columna 3 proporcionalmente -->
+      <div class="footer-col footer-col-3" style="width: 35%;">
         <p>{{ site.description | escape }}</p>
       </div>
     </div>
