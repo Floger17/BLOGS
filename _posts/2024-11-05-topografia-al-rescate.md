@@ -6,7 +6,7 @@ En este blog, se pretende exponer los pasos a seguir, junto con mi experiencia c
 
 La topografía, los Sistemas de Información Geográficos (SIG), y la Teledetección han sido herramientas claves para la elaboración del visor cartográfico elaborado por el CGAT. 
 
-El proyecto se llama "DANA carrer a carrer" (en castellano "DANA calle a calle") consta de 3 fases.
+El proyecto se llama "DANA carrer a carrer" (en castellano "*DANA calle a calle*") consta de 3 fases.
 
 ## Fase 1: Levantamiento de campo con mira topográfica
 La primera parte del proyecto, consistió en hacer una salida de campo con una mira topográfica y con una aplicación móvil QField, donde, a partir de mirar la altura de la lámina de agua con una mira topográfica, se sitúa el lugar, poniendo la medición, la altura del agua, alguna observación a tener en cuenta, y con la posibilidad de poder introducir una fotografía con el teléfono.
