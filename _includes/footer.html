@@ -5,29 +5,26 @@
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-    <!-- Flexbox para alinear perfectamente la parte superior de las columnas -->
-    <div class="footer-col-wrapper" style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;">
-      
-      <!-- Columna 1: Tu información -->
-      <div class="footer-col footer-col-1" style="flex: 1 1 50%; max-width: 55%; margin: 0; padding-right: 20px;">
-        <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
-          <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
-          <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
-          <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
-        </ul>
-      </div>
+    <!-- Tabla sin bordes para forzar alineación horizontal exacta -->
+    <table style="width: 100%; border: none; margin: 0; padding: 0; background: transparent;">
+      <tr style="background: transparent;">
+        
+        <!-- Columna Izquierda: Tus datos -->
+        <td style="width: 55%; vertical-align: top; border: none; padding: 0 15px 0 0;">
+          <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
+            <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
+            <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
+            <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
+          </ul>
+        </td>
 
-      <!-- Columna 2: Redes del tema (si las hay) -->
-      <div class="footer-col footer-col-2" style="margin: 0;">
-        {%- include social.html -%}
-      </div>
+        <!-- Columna Derecha: Descripción -->
+        <td style="width: 45%; vertical-align: top; border: none; padding: 0;">
+          <p style="margin: 0;">{{ site.description | escape }}</p>
+        </td>
 
-      <!-- Columna 3: Descripción del sitio -->
-      <div class="footer-col footer-col-3" style="flex: 1 1 40%; max-width: 40%; margin: 0;">
-        <p style="margin: 0;">{{ site.description | escape }}</p>
-      </div>
-
-    </div>
+      </tr>
+    </table>
 
   </div>
 </footer>
