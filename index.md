@@ -2,6 +2,12 @@
 layout: home
 title: Inicio
 ---
+
+<p>
+  <strong>Fabio Regolf Ariño</strong><br>
+  <em>Estudiante de Ingeniería Geomática y Topografía<br>
+  Precolegiado Nº PR00205</em>
+</p>
 <style>
 /* Contenedor de iconos al final de la página */
 .social-icons-grid {
