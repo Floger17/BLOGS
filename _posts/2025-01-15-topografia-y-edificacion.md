@@ -2,7 +2,7 @@ Cuando se habla de “Edificación” se suele asociar a arquitectos diseñando 
 Pero, en muchas ocasiones, nuestra labor pasa desapercibida para muchos, ya sea por ignorancia o desconocimiento, algunas personas de otras ingenierías pueden vernos por encima del hombre, o tratarnos como a unos simples peones de la obra por llevar un chaleco y casco y un aparatejo extraño que no saben exactamente de lo que es capaz de ofrecer al topógrafo, y por estar presentes antes y durante las obras.
 
 
-En este blog, se contará mi experiencia durante las prácticas que hice en Edificación como topógrafo. A lo largo de este blog, expondré 9 lecciones que aprendí en la obra que seguro, cualquier topógrafo ha vivido o ha tenido la gracia o desventura de verse en alguna de estas situaciones. 
+En este blog, se contará mi experiencia durante las prácticas que hice en Edificación como topógrafo. A lo largo de este blog, expondré 10 lecciones que aprendí en la obra que seguro, cualquier topógrafo ha vivido o ha tenido la gracia o desventura de verse en alguna de estas situaciones. 
 
 
 
@@ -60,9 +60,13 @@ Aquí aprendí a sufrir por la estación total, ya que, como topógrafos, somos 
 
 Por eso, cada vez que vi al gruista trasportar carga de un lado a otro y cerca de la estación mi corazón se aceleraba ante la posibilidad de que, choque con la estación y la tire al suelo. O que algún peón de la obra, por lo que sea, se apoye en el trípode de la estación, haciendo que se desnivele y tengamos que volver a estacionar y hacer la intersección solo porque a alguien le diera por apoyarse en la estación total. Y ya, estando en tablero, al sol asfixiante, o al frío, el viento, o las vibraciones que hay en la obra cada vez que dan martillazos cerca de la estación, que la estación, es hipersensible y detecta hasta una mosca aletear cerca, es decir, el instrumental, a parte de ser caro, es muy sensible a todos los fenómenos meteorológicos, y si ya, estando expuesta a riesgos en la obra, hace que, la preocupación por el instrumental sea máximo.
 
+## Lección 8: El almuerzo.
 
+La cultura del almuerzo no muere nunca, y desde luego, aprendí que, donde iban la mayoría de obreros, implicaba que el bar al que iban a comerse un chivito o de tortilla, es que estaba bueno, en cambio, los bares a los que no había mucha gente, las probabilidades de acertar en un buen almuerzo se reducen drásticamente. 
 
-## Lección 8: No se nos valora lo suficiente.
+También, aprendí que, cuando los peones se iban a almorzar y me quedaba en la obra solo, era realmente el momento opportuno para apretar y avanzar faena antes de que regresaran para no tener incidentes de que dejan obstáculos por ahí, o simplemente, se ponen entre la estación y el topógrafo. Y cuando regresan, es en ocasiones, el turno del almuerzo. Aprendí esas maneras de anticiparse a obstáculos futuros y meterle caña de verdad. 
+
+## Lección 9: No se nos valora lo suficiente.
 
 
 Con todo lo expuesto, esta lección es una de las más duras que cuesta de aceptar, y sobre todo más aun cuando se es estudiante y vas con ilusión y ganas a hacer tu trabajo. Y es que, tal vez por cuestión de prejuicios. Siempre se nos ha visto como auxiliares, no como ingenieros técnicos o ingenieros. Y alguna vez, el arquitecto o el ingeniero nos miran por encima del hombro, o incluso como a simples peones. Pese a ser ese nexo entre el plano y a realidad, no se valora o no que se valore, sino que, pasamos desapercibidos a ojos de las demás profesiones.
@@ -75,7 +79,7 @@ En definitiva, nuestras aportaciones, por muy relevantes que sean, somos infrava
 
 
 
-## Lección 9: ¿Salarios acordes con el trabajo, implicación y esfuerzo?
+## Lección 10: ¿Salarios acordes con el trabajo, implicación y esfuerzo?
 
 Sé que es un tema muy delicado, pero hay que decirlo y preguntarse. ¿Pese a que el topógrafo sea ingeniero o ingeniero técnico, con estudios superiores, expuestos a peligros y adversidades climáticas, y tener un grado de responsabilidad mayor que la de los albañiles o ferrallas o encofradores, es justo que se nos pague menos que a los albañiles y por supuesto, menos que el ingeniero de obras públicas y pese a ser nosotros los topógrafos ese agente imprescindible de las mediciones para que los demás grupos de trabajo lleven a cabo su faena y ser ese nexo del brazo ejecutor (peones, albañiles…) con los diseñadores (ingenieros y arquitectos)? En mi humilde opinión como estudiante, no, no es justo, porque parece que el estar expuestos riesgos y peligros no cuenta, y ya de por sí, nuestra función es primordial para ser ese actor que lleva del plano a la realidad y somos ingenieros al igual que el de obras públicas. 
 
