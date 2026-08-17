@@ -3,13 +3,6 @@ layout: home
 title: Inicio
 ---
 
-<!-- PRESENTACIÓN CON NEGRITA Y CURSIVA -->
-<p>
-  <strong>Fabio Regolf Ariño</strong><br>
-  <em>Estudiante de Ingeniería Geomática y Topografía<br>
-  Precolegiado Nº PR00205</em>
-</p>
-
 <!-- ESTILOS DE LOS ICONOS -->
 <style>
 .social-icons-grid {
@@ -17,8 +10,8 @@ title: Inicio
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
@@ -43,25 +36,16 @@ title: Inicio
 
 <!-- SECCIÓN DE REDES SOCIALES Y CONTACTO -->
 <div class="social-icons-grid">
-
-  <!-- 1. LINKEDIN -->
-  <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="Perfil Profesional en LinkedIn" class="social-icon-link">
+  <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="LinkedIn" class="social-icon-link">
     <img src="{{ '/assets/img/linkedin.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
   </a>
-
-  <!-- 2. GITHUB -->
-  <a href="https://github.com/floger17" target="_blank" title="Repositorio GitHub" class="social-icon-link">
+  <a href="https://github.com/floger17" target="_blank" title="GitHub" class="social-icon-link">
     <img src="{{ '/assets/img/github.png' | relative_url }}" alt="GitHub" class="social-icon-img">
   </a>
-
-  <!-- 3. PRECOLEGIADO COIGT -->
   <a href="https://www.coigt.com/profesional/PR00205" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
-    <img src="{{ '/assets/img/topography.png' | relative_url }}" alt="Precolegiado COIGT" class="social-icon-img">
+    <img src="{{ '/assets/img/topography.png' | relative_url }}" alt="COIGT" class="social-icon-img">
   </a>
-
-  <!-- 4. INSTAGRAM -->
   <a href="https://www.instagram.com/tu-usuario" target="_blank" title="Instagram" class="social-icon-link">
     <img src="{{ '/assets/img/instagram.png' | relative_url }}" alt="Instagram" class="social-icon-img">
   </a>
-
 </div>
