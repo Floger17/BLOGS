@@ -88,7 +88,7 @@ Proyecto CGAT:
 https://dana2024.upvusig.car.upv.es/
 
 ETSIGCT:
-https://www.upv.es/entidades/etsigct/2025/01/28/el-grupo-cgat-del-dicgf-junto-con-la-etsigct-crea-un-mapa-de-la-inundacion-en-lhorta-sud-tras-el-episodio-del-29-de-octubre-de-2024/
+(https://www.upv.es/entidades/etsigct/2025/01/28/el-grupo-cgat-del-dicgf-junto-con-la-etsigct-crea-un-mapa-de-la-inundacion-en-lhorta-sud-tras-el-episodio-del-29-de-octubre-de-2024/
 
 UPV:
 https://www.upv.es/noticias-upv/noticia-15013-mapa-de-inunda-es.html
