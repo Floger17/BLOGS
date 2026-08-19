@@ -2,27 +2,30 @@
 ---
 @import "minima";
 
-/* 1. Ocultar el enlace "subscribe via RSS" de la página de inicio */
-.feed-subscribe, 
-a[href$="feed.xml"] {
+/* 1. Ocultar el texto de suscripción RSS */
+.feed-subscribe,
+p.feed-subscribe,
+a[href*="feed.xml"] {
   display: none !important;
 }
 
-/* 2. Ajuste para que las columnas no se rompan en móviles verticales */
-@media screen and (max-width: 760px) {
-  .site-footer .wrapper {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-
-  .footer-col-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-
-  .footer-col {
+/* 2. Adaptación de la tabla a móvil vertical */
+@media screen and (max-width: 600px) {
+  table.responsive-footer-table,
+  table.responsive-footer-table tbody,
+  table.responsive-footer-table tr {
+    display: block !important;
     width: 100% !important;
-    margin-bottom: 0 !important;
+  }
+
+  table.responsive-footer-table td.col-left,
+  table.responsive-footer-table td.col-right {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  table.responsive-footer-table td.col-left {
+    margin-bottom: 12px !important;
   }
 }
