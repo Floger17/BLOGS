@@ -33,7 +33,7 @@ Durante los meses de noviembre del 2024 hasta mayo de 2025 se han realizado un t
 En esta segunda fase, se ha realizado en gabinete, primero, la comprobación de los datos obtenidos. Posteriormente la creación de la lámina de agua.
 
 <figure style="text-align: center; margin: 2rem 0;">
-  <img src="{{ '/assets/img/GABINETE_DANA.jpg' | relative_url }}" alt="En gabinete validando las mediciones en QGIS." style="max-width: 100%; height: auto; border-radius: 8px;">
+  <img src="{{ '/assets/img/GABINETE_DANA.jpeg' | relative_url }}" alt="En gabinete validando las mediciones en QGIS." style="max-width: 100%; height: auto; border-radius: 8px;">
   <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
     En gabinete validando las mediciones en QGIS.
   </figcaption>
