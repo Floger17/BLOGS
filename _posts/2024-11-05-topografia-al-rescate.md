@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Topografía al rescate"
+date: 27/07/2025
+---
+
 <style> /* Justifica todos los párrafos y listas del artículo */ main p, main ul, main ol { text-align: justify; } /* Mantiene el pie de foto centrado */ figcaption { text-align: center !important; } </style>
 
 # TOPOGRAFÍA AL RESCATE
