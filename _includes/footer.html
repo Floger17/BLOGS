@@ -1,7 +1,7 @@
 <footer class="site-footer h-card">
   <div class="wrapper">
-    
-    <!-- Contenedor de columnas adaptables -->
+
+    <!-- Bloque superior: Datos y Descripción -->
     <div class="footer-layout">
       
       <!-- Bloque 1: Identidad -->
@@ -19,54 +19,21 @@
 
     </div>
 
-    <!-- Enlaces a redes sociales -->
-    <div class="footer-social-wrapper">
-      <ul class="social-links-list">
-        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/floger17" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
+    <!-- Bloque inferior: Iconos de Redes Sociales -->
+    <div class="social-icons-grid">
+      <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="LinkedIn" class="social-icon-link">
+        <img src="{{ '/assets/img/LinkedIn logo Negro.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
+      </a>
+      <a href="https://github.com/floger17" target="_blank" title="GitHub" class="social-icon-link">
+        <img src="{{ '/assets/img/HitHub_Negro.png' | relative_url }}" alt="GitHub" class="social-icon-link">
+      </a>
+      <a href="https://www.coigt.com/profesional/PR00205" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
+        <img src="{{ '/assets/img/Escudo_Oficial_COIGT_NEGRO_SIMPLE.PNG' | relative_url }}" alt="COIGT" class="social-icon-img">
+      </a>
+      <a href="https://www.instagram.com/fabioreg2002?igsh=ajEwdjZ5ZjNxejNn" target="_blank" title="Instagram" class="social-icon-link">
+        <img src="{{ '/assets/img/Instagram.PNG' | relative_url }}" alt="Instagram" class="social-icon-img">
+      </a>
     </div>
 
   </div>
 </footer>
-
-<style>
-  .footer-layout {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
-    padding-top: 15px;
-  }
-
-  .footer-col {
-    flex: 1 1 280px;
-    min-width: 0;
-  }
-
-  .footer-title, .footer-author { margin: 0 0 4px 0; }
-  .footer-sub { margin: 0; font-size: 0.9em; color: #555; }
-  .footer-desc { margin: 0; line-height: 1.5; color: #444; }
-
-  .footer-social-wrapper {
-    border-top: 1px solid #e8e8e8;
-    padding-top: 15px;
-    text-align: center;
-  }
-
-  .social-links-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .social-links-list a {
-    font-weight: bold;
-    text-decoration: none;
-  }
-</style>
