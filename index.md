@@ -22,20 +22,20 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* Banner con Curvas de Nivel y Borde Técnico */
+  /* MODELO OPTIMIZADO: Banner Claro Técnico de Alto Impacto */
   .topo-hero {
-    background-color: #0f172a;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='200' viewBox='0 0 600 200'%3E%3Cpath d='M-50,150 Q150,50 350,120 T750,80' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.5'/%3E%3Cpath d='M-50,120 Q150,20 350,90 T750,50' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3Cpath d='M-50,90 Q150,-10 350,60 T750,20' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3Cpath d='M-50,180 Q150,80 350,150 T750,110' fill='none' stroke='rgba(37,99,235,0.4)' stroke-width='2'/%3E%3C/svg%3E");
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='200' viewBox='0 0 600 200'%3E%3Cpath d='M-50,150 Q150,50 350,120 T750,80' fill='none' stroke='rgba(37,99,235,0.25)' stroke-width='1.5'/%3E%3Cpath d='M-50,120 Q150,20 350,90 T750,50' fill='none' stroke='rgba(148,163,184,0.3)' stroke-width='1'/%3E%3Cpath d='M-50,180 Q150,80 350,150 T750,110' fill='none' stroke='rgba(37,99,235,0.4)' stroke-width='2'/%3E%3C/svg%3E");
     background-size: cover;
-    color: #ffffff;
     padding: 2.2rem 1.8rem;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 2rem;
-    border: 1px solid #334155; /* Borde de marco técnico */
+    border: 1px solid #cbd5e1; 
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -2px rgba(15, 23, 42, 0.02);
   }
 
   .topo-hero h1 {
-    color: #ffffff !important;
+    color: #0f172a !important;
     font-weight: 800;
     font-size: 2rem;
     margin: 0 0 0.4rem 0;
@@ -43,9 +43,9 @@ title: Inicio
 
   .badge-topografia {
     display: inline-block;
-    background: rgba(37, 99, 235, 0.3);
-    border: 1px solid rgba(147, 197, 253, 0.4);
-    color: #93c5fd;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 3px 10px;
@@ -56,7 +56,7 @@ title: Inicio
   }
 
   .topo-hero p {
-    color: #cbd5e1;
+    color: #334155;
     margin: 0;
   }
 
