@@ -1,37 +1,75 @@
 <footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
   <div class="wrapper">
 
-    <!-- Bloque superior: Datos y Descripción -->
-    <div class="footer-layout">
-      
-      <!-- Bloque 1: Identidad -->
-      <div class="footer-col">
-        <p class="footer-title"><strong>Geomática y Topografía</strong></p>
-        <p class="footer-author"><strong>Fabio Regolf Ariño</strong></p>
-        <p class="footer-sub"><em>Estudiante de Ingeniería Geomática y Topografía</em></p>
-        <p class="footer-sub"><em>Precolegiado Nº PR00205</em></p>
-      </div>
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-      <!-- Bloque 2: Descripción -->
-      <div class="footer-col">
-        <p class="footer-desc">Diario de un estudiante de Ingeniería Geomática y Topografía. Experiencias en prácticas, divulgación y reflexiones.</p>
-      </div>
+    <!-- Tabla de datos de autor y descripción -->
+    <table style="width: 100%; border: none; margin: 0; padding: 0; background: transparent;">
+      <tr style="background: transparent;">
+        
+        <!-- Columna Izquierda: Tus datos -->
+        <td style="width: 55%; vertical-align: top; border: none; padding: 0 15px 0 0;">
+          <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
+            <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
+            <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
+            <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
+          </ul>
+        </td>
 
-    </div>
+        <!-- Columna Derecha: Descripción -->
+        <td style="width: 45%; vertical-align: top; border: none; padding: 0;">
+          <p style="margin: 0;">{{ site.description | escape }}</p>
+        </td>
 
-    <!-- Bloque inferior: Iconos de Redes Sociales (Tamaño forzado) -->
+      </tr>
+    </table>
+
+    <!-- ESTILOS DE REDES SOCIALES -->
+    <style>
+    .social-icons-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-icon-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+
+    .social-icon-img {
+      height: 38px !important;
+      width: auto !important;
+      object-fit: contain;
+    }
+
+    .social-icon-link:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+    </style>
+
+    <!-- SECCIÓN DE REDES SOCIALES CON RUTAS CORREGIDAS -->
     <div class="social-icons-grid">
       <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="LinkedIn" class="social-icon-link">
-        <img src="{{ '/assets/img/LinkedIn logo Negro.png' | relative_url }}" alt="LinkedIn" class="social-icon-img" height="38" style="height: 38px !important; width: auto !important;">
+        <img src="{{ '/assets/img/LinkedIn logo Negro.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
       </a>
       <a href="https://github.com/floger17" target="_blank" title="GitHub" class="social-icon-link">
-        <img src="{{ '/assets/img/HitHub_Negro.png' | relative_url }}" alt="GitHub" class="social-icon-img" height="38" style="height: 38px !important; width: auto !important;">
+        <img src="{{ '/assets/img/HitHub_Negro.png' | relative_url }}" alt="GitHub" class="social-icon-img">
       </a>
       <a href="https://www.coigt.com/profesional/PR00205" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
-        <img src="{{ '/assets/img/Escudo_Oficial_COIGT_NEGRO_SIMPLE.PNG' | relative_url }}" alt="COIGT" class="social-icon-img" height="38" style="height: 38px !important; width: auto !important;">
+        <img src="{{ '/assets/img/Escudo_Oficial_COIGT_NEGRO_SIN_FONDO.png' | relative_url }}" alt="COIGT" class="social-icon-img">
       </a>
-      <a href="https://www.instagram.com/fabioreg2002?igsh=ajEwdjZ5ZjNxejNn" target="_blank" title="Instagram" class="social-icon-link">
-        <img src="{{ '/assets/img/Instagram.PNG' | relative_url }}" alt="Instagram" class="social-icon-img" height="38" style="height: 38px !important; width: auto !important;">
+      <a href="https://www.instagram.com/tu-usuario" target="_blank" title="Instagram" class="social-icon-link">
+        <img src="{{ '/assets/img/instagram.png' | relative_url }}" alt="Instagram" class="social-icon-img">
       </a>
     </div>
 
