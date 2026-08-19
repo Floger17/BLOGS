@@ -20,8 +20,13 @@ El proyecto se llama "DANA carrer a carrer" (en castellano "*DANA calle a calle*
 ## Fase 1: Levantamiento de campo con mira topográfica
 La primera parte del proyecto, consistió en hacer una salida de campo con una mira topográfica y con una aplicación móvil QField, donde, a partir de mirar la altura de la lámina de agua con una mira topográfica, se sitúa el lugar, poniendo la medición, la altura del agua, alguna observación a tener en cuenta, y con la posibilidad de poder introducir una fotografía con el teléfono.
 
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="/assets/img/MIRA_TOPOGRAFICA.jpg" alt="Descripción de la imagen" style="max-width: 100%; height: auto; border-radius: 8px;">
+  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
+    Imagen de una mira topográfica. Medición en Horno de Alcedo (Valencia).
+  </figcaption>
+</figure>
 
-Imagen de una mira topográfica. Medición en Horno de Alcedo (Valencia).
 
 Durante los meses de noviembre del 2024 hasta mayo de 2025 se han realizado un total de 6500 mediciones, de las cuales, mis aportaciones fueron considerables, con 1113 mediciones en las pedanías de La Torre, Horno de Alcedo y Castellar-l'Oliveral, y municipios como Sedaví, Alfafar, Massanassa, Mislata, Torrent y área de la Albufera, y todas las mediciones han sido en la comarca de l'Horta Sud, la mayoría en zonas urbanas, como a su vez en áreas rústicas. La localización utilizada fue con el GPS de los propios teléfonos móviles, con el fondo de Open Street Map (OSM) y la ortofoto del PNOA.  se procederá a la validación en gabinete con el software QGIS.
 
@@ -70,7 +75,13 @@ Tras mis salidas de campo, dada la gran cantidad de mediciones que hice (1113/65
 
 Recuerdo que esto del gabinete, iba después de mis clases por las mañanas me pasaba por el CGAT y hacía mi tarea, algunas veces empezaba a las 12:00 y terminaba a las 18:00 o incluso más tarde. Pero a mi entender, sí mereció la pena, porque el 29 de enero de 2025 salió el proyecto publicado, y tuvo mucha repercusión mediática y en los periódicos. Saliendo en periódicos como El País, Las Provincias, El Levante E.M.V, Valencia Secreta, Europa Press, y en páginas web de RTVE, Onda Cero, y otros medios como La Cuatro, Telecinco... y otros medios locales como À Punt o la 7TeleValencia. Y como no, al ser un proyecto del CGAT, perteneciente a mi escuela, la ETSIGCT, también publicaron la noticia en sus páginas webs y redes sociales, tanto la ETSIGCT, como la UPV como a su vez, el COIGT, el Ilustre Colegio Oficial de Ingenieros en Geomática y Topografía, del cual, soy precolegiado, y a su vez, estuvimos en la Feria del Invento de la Ciudad de las Artes y las Ciencias del viernes 9 de mayo, evento que fue abierta al público, y este proyecto, sus frutos dio, al ser datos que manejan ayuntamientos afectados por la DANA, la Confederación Hidrográfica del Júcar (CHJ) y el Institut Cartogràfic Valencià (ICV) con la capa de "UPV" como ente que ha aportado datos.
 
-Captura de pantalla del visor del ICV.
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="/assets/img/Captura_ICV.png" alt="Descripción de la imagen" style="max-width: 100%; height: auto; border-radius: 8px;">
+  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
+    Captura de pantalla del visor del ICV.
+  </figcaption>
+</figure>
+
 Y dejando de lado la parte técnica, ha sido un proyecto realmente enriquecedor en lo personal, porque es ver con tus propios ojos las aplicaciones reales de los conocimientos técnicos sobre geomática y topografía para entender, de una manera objetiva y libre de fanatismos ideológicos, entender y comprender qué ha sucedido, cómo ha sucedido y qué se puede hacer para evitar que otra catástrofe como esta vuelva a hacer tanto daño en lo material y humanitario de los valencianos.
 
 Cuando iba con la mira topográfica por las calles, algunos, me paraban y me preguntaban si era del ayuntamiento, a lo que siempre respondía que era voluntario que estaba en un proyecto de la universidad. Muchos me miraron con muy buenos ojos, me enseñaron videos, me contaron sus experiencias durante la DANA y de los días posteriores donde la ayuda era inexistente. Y sobre todo, el ver las noticias a través de una pantalla era una cosa, pero una vez allí, con zapatillas sucias para poder usarlas para meterme en lugares donde aun tras 2 meses seguían con barro y polvo, y olor a tuberías atascadas de las calles, el ver los coches en los descampados, todo destrozado y con un ambiente grisáceo, sucio, verlo con tus ojos, y ver y escuchar las experiencias de quienes me pararon para hablarme, eso es lo impactante, lo enriquecedor.
@@ -92,7 +103,7 @@ Y respecto a mi experiencia en la DANA. Estos acontecimientos sacan lo peor y lo
 # Rol de la geomática y la topografía
 Y por último, respecto a mi formación académica en esta ingeniería, como lo es la geomática y la topografía me ha dejado muy claro lo siguiente. Y es que la ingeniería en geomática y topografía no es solamente replantear una obra cualquiera, sino que se está replenteando una carretera o ferrocarril (para comunicar poblaciones y naciones) como un edificio (ya sea un colegio, una residencia de ancianos, un lugar de ocio, un hospital o viviendas), la geomática y la topografía tiene un impacto muy importante en la vida de las personas, por lo que, se puede decir entonces que es una disciplina que está al servicio de la sociedad, es una disciplina que tiene un impacto real en la vida de las personas, y una de esos impactos, es el entendimiento de la DANA, ayuda a entender qué ha sucedido, y cómo se podría actuar en consecuencia, y en definitiva, el proyecto en el que tuve el privilegio de participar en este proyecto, ya que ha ayudado a que los ayuntamientos afectados puedan diseñar un plan de evacuación o replantear sus planes urbanísticos... y todo esto tiene un impacto directo en la vida de las personas. Y no hay mayor orgullo que saber que mi gremio puede aportar tantísimo a la sociedad, tal vez, los topógrafos no seamos personas muy reconocidas por nuestra labor y por nuestro trabajo, pero no hay mayor orgullo personal que podemos hacer grandes contribuciones y muy importantes ante catástrofes naturales como la sucedida en el 29 de octubre de 2024 en Valencia. Y con otras tecnologías como la teledetección y la fotogrametría pueden ser de ayuda para la elaboración de cartografiado que ayude a interpretar lo sucedido y ayudar a poner remedio ante catástrofes naturales, para dar esperanzas a todos los valencianos que tanto han sufrido y padecido las consecuencias materiales y humanas.
 
-Para más información acerca del proyevto y de las noticias respecto al proyecto está a continuación.
+Para más información acerca del proyecto y de las noticias respecto al proyecto está a continuación.
 
 Proyecto CGAT:
 https://dana2024.upvusig.car.upv.es/
