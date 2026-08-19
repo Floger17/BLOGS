@@ -22,11 +22,13 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* MODELO OPTIMIZADO: Banner Claro Técnico de Alto Impacto */
+  /* MODELO INSPIRADO EN CARPETA COIGT: Curvas Céntricas Reales */
   .topo-hero {
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='200' viewBox='0 0 600 200'%3E%3Cpath d='M-50,150 Q150,50 350,120 T750,80' fill='none' stroke='rgba(37,99,235,0.25)' stroke-width='1.5'/%3E%3Cpath d='M-50,120 Q150,20 350,90 T750,50' fill='none' stroke='rgba(148,163,184,0.3)' stroke-width='1'/%3E%3Cpath d='M-50,180 Q150,80 350,150 T750,110' fill='none' stroke='rgba(37,99,235,0.4)' stroke-width='2'/%3E%3C/svg%3E");
+    /* Vector SVG con elevación topográfica cerrada inspirada en el COIGT */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='250' viewBox='0 0 800 250'%3E%3Cg fill='none' stroke='%238c4a38' stroke-width='1' opacity='0.18'%3E%3Cpath d='M400,125 C450,110 460,140 400,140 C350,140 340,110 400,125 Z'/%3E%3Cpath d='M400,110 C480,90 500,155 400,155 C300,155 310,90 400,110 Z'/%3E%3Cpath d='M400,95 C520,70 540,170 400,170 C260,170 280,70 400,95 Z'/%3E%3Cpath d='M400,80 C560,50 580,185 400,185 C220,185 240,50 400,80 Z' stroke-width='1.5' opacity='0.25'/%3E%3Cpath d='M400,65 C600,30 620,200 400,200 C180,200 200,30 400,65 Z'/%3E%3Cpath d='M400,50 C640,10 660,215 400,215 C140,215 160,10 400,50 Z'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
+    background-position: center;
     padding: 2.2rem 1.8rem;
     border-radius: 12px;
     margin-bottom: 2rem;
