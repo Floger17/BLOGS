@@ -20,3 +20,8 @@
     margin-bottom: 0 !important;
   }
 }
+
+/* Ocultar el enlace de suscripción RSS */
+.feed-subscribe {
+  display: none !important;
+}
