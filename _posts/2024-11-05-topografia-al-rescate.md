@@ -43,7 +43,7 @@ En esta segunda fase, se ha realizado en gabinete, primero, la comprobación de 
 En la última fase se ha realizado el mapa, con una rampa de colores, en el que los colores azules son cotas bajas, y a mayor color cálido y rojizo mayor altura. Y creación de un visor interactivo.
 
 <figure style="text-align: center; margin: 2rem 0;">
-  <img src="{{ '/assets/img/MAPA_FINAL_DANA.jpg' | relative_url }}" alt="Mapa final del proyecto." style="max-width: 100%; height: auto; border-radius: 8px;">
+  <img src="{{ '/assets/img/MAPA_FINAL_DANA.jpg' | relative_url }}" alt="Mapa final del proyecto." style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
   <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
     Mapa final del proyecto.
   </figcaption>
