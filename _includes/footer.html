@@ -5,26 +5,24 @@
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-    <!-- Tabla de datos de autor y descripción -->
-    <table style="width: 100%; border: none; margin: 0; padding: 0; background: transparent;">
-      <tr style="background: transparent;">
-        
-        <!-- Columna Izquierda: Tus datos -->
-        <td style="width: 55%; vertical-align: top; border: none; padding: 0 15px 0 0;">
-          <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
-            <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
-            <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
-            <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
-          </ul>
-        </td>
+    <!-- Datos de autor y descripción adaptables a móvil -->
+    <div class="footer-custom-layout">
+      
+      <!-- Columna Izquierda: Tus datos -->
+      <div class="footer-custom-col left-col">
+        <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
+          <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
+          <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
+          <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
+        </ul>
+      </div>
 
-        <!-- Columna Derecha: Descripción -->
-        <td style="width: 45%; vertical-align: top; border: none; padding: 0;">
-          <p style="margin: 0;">{{ site.description | escape }}</p>
-        </td>
+      <!-- Columna Derecha: Descripción -->
+      <div class="footer-custom-col right-col">
+        <p style="margin: 0;">{{ site.description | escape }}</p>
+      </div>
 
-      </tr>
-    </table>
+    </div>
 
     <!-- ESTILOS DE REDES SOCIALES -->
     <style>
@@ -57,7 +55,7 @@
     }
     </style>
 
-    <!-- SECCIÓN DE REDES SOCIALES CON RUTAS CORREGIDAS -->
+    <!-- SECCIÓN DE REDES SOCIALES -->
     <div class="social-icons-grid">
       <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="LinkedIn" class="social-icon-link">
         <img src="{{ '/assets/img/LinkedIn logo Negro.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
