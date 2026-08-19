@@ -22,20 +22,20 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* Banner Claro Estilo Informe Técnico */
+  /* Banner con Curvas de Nivel y Borde Técnico */
   .topo-hero {
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='200' viewBox='0 0 600 200'%3E%3Cpath d='M-50,150 Q150,50 350,120 T750,80' fill='none' stroke='rgba(148,163,184,0.3)' stroke-width='1.5'/%3E%3Cpath d='M-50,120 Q150,20 350,90 T750,50' fill='none' stroke='rgba(148,163,184,0.2)' stroke-width='1'/%3E%3Cpath d='M-50,180 Q150,80 350,150 T750,110' fill='none' stroke='rgba(37,99,235,0.5)' stroke-width='2'/%3E%3C/svg%3E");
+    background-color: #0f172a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='200' viewBox='0 0 600 200'%3E%3Cpath d='M-50,150 Q150,50 350,120 T750,80' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.5'/%3E%3Cpath d='M-50,120 Q150,20 350,90 T750,50' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3Cpath d='M-50,90 Q150,-10 350,60 T750,20' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3Cpath d='M-50,180 Q150,80 350,150 T750,110' fill='none' stroke='rgba(37,99,235,0.4)' stroke-width='2'/%3E%3C/svg%3E");
     background-size: cover;
+    color: #ffffff;
     padding: 2.2rem 1.8rem;
     border-radius: 10px;
     margin-bottom: 2rem;
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #334155; /* Borde de marco técnico */
   }
 
   .topo-hero h1 {
-    color: #0f172a !important;
+    color: #ffffff !important;
     font-weight: 800;
     font-size: 2rem;
     margin: 0 0 0.4rem 0;
@@ -43,9 +43,9 @@ title: Inicio
 
   .badge-topografia {
     display: inline-block;
-    background: rgba(37, 99, 235, 0.1);
-    border: 1px solid rgba(37, 99, 235, 0.3);
-    color: #2563eb;
+    background: rgba(37, 99, 235, 0.3);
+    border: 1px solid rgba(147, 197, 253, 0.4);
+    color: #93c5fd;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 3px 10px;
@@ -56,7 +56,7 @@ title: Inicio
   }
 
   .topo-hero p {
-    color: #475569;
+    color: #cbd5e1;
     margin: 0;
   }
 
