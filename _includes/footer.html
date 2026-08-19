@@ -5,59 +5,26 @@
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-    <!-- Tabla de datos de autor y descripción -->
-    <table class="responsive-footer-table" style="width: 100%; border: none; margin: 0; padding: 0; background: transparent;">
-      <tr style="background: transparent;">
-        
-        <!-- Columna Izquierda: Tus datos -->
-        <td class="col-left" style="width: 55%; vertical-align: top; border: none; padding: 0 15px 0 0;">
-          <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
-            <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
-            <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
-            <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
-          </ul>
-        </td>
+    <!-- CONTENEDOR ADAPTABLE (Sin usar tablas rígidas) -->
+    <div class="footer-flex-container">
+      
+      <!-- Columna Izquierda: Tus datos -->
+      <div class="footer-col-left">
+        <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
+          <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
+          <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
+          <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
+        </ul>
+      </div>
 
-        <!-- Columna Derecha: Descripción -->
-        <td class="col-right" style="width: 45%; vertical-align: top; border: none; padding: 0;">
-          <p style="margin: 0;">{{ site.description | escape }}</p>
-        </td>
+      <!-- Columna Derecha: Descripción -->
+      <div class="footer-col-right">
+        <p style="margin: 0;">{{ site.description | escape }}</p>
+      </div>
 
-      </tr>
-    </table>
+    </div>
 
-    <!-- ESTILOS DE REDES SOCIALES -->
-    <style>
-    .social-icons-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.2rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .social-icon-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.25s ease, filter 0.25s ease;
-    }
-
-    .social-icon-img {
-      height: 38px !important;
-      width: auto !important;
-      object-fit: contain;
-    }
-
-    .social-icon-link:hover {
-      transform: scale(1.2);
-      filter: brightness(1.2);
-    }
-    </style>
-
-    <!-- SECCIÓN DE REDES SOCIALES -->
+    <!-- SECCIÓN DE REDES SOCIALES CON SUS ESTILOS -->
     <div class="social-icons-grid">
       <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="LinkedIn" class="social-icon-link">
         <img src="{{ '/assets/img/LinkedIn logo Negro.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
@@ -75,3 +42,73 @@
 
   </div>
 </footer>
+
+<!-- ESTILOS DIRECTOS (Garantiza funcionamiento en Móvil y PC + Oculta RSS) -->
+<style>
+  /* 1. Ocultar enlace RSS/Subscribe */
+  .feed-subscribe, 
+  p.feed-subscribe, 
+  a[href*="feed.xml"] {
+    display: none !important;
+  }
+
+  /* 2. Disposición en Ordenador y Móvil Horizontal (2 columnas) */
+  .footer-flex-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .footer-col-left {
+    width: 55% !important;
+  }
+
+  .footer-col-right {
+    width: 45% !important;
+  }
+
+  /* 3. Disposición en Móvil Vertical (Pantallas menores a 650px) */
+  @media screen and (max-width: 650px) {
+    .footer-flex-container {
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+
+    .footer-col-left, 
+    .footer-col-right {
+      width: 100% !important;
+    }
+  }
+
+  /* 4. Estilos de los iconos de Redes Sociales */
+  .social-icons-grid {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.2rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .social-icon-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.25s ease, filter 0.25s ease !important;
+  }
+
+  .social-icon-img {
+    height: 38px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  .social-icon-link:hover {
+    transform: scale(1.2) !important;
+    filter: brightness(1.2) !important;
+  }
+</style>
