@@ -21,7 +21,7 @@ El proyecto se llama "DANA carrer a carrer" (en castellano "*DANA calle a calle*
 La primera parte del proyecto, consistió en hacer una salida de campo con una mira topográfica y con una aplicación móvil QField, donde, a partir de mirar la altura de la lámina de agua con una mira topográfica, se sitúa el lugar, poniendo la medición, la altura del agua, alguna observación a tener en cuenta, y con la posibilidad de poder introducir una fotografía con el teléfono.
 
 <figure style="text-align: center; margin: 2rem 0;">
-  <img src="/assets/img/MIRA_TOPOGRAFICA.jpg" alt="Descripción de la imagen" style="max-width: 100%; height: auto; border-radius: 8px;">
+  <img src="assets/img/MIRA_TOPOGRAFICA.jpg" alt="Descripción de la imagen" style="max-width: 100%; height: auto; border-radius: 8px;">
   <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
     Imagen de una mira topográfica. Medición en Horno de Alcedo (Valencia).
   </figcaption>
