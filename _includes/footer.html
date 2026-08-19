@@ -1,39 +1,77 @@
----
----
-@import "minima";
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-/* 1. Ocultar el enlace de suscripción RSS */
-p.feed-subscribe,
-.feed-subscribe,
-a[href*="feed.xml"] {
-  display: none !important;
-}
+  <div class="wrapper">
 
-/* 2. Disposición de las dos columnas de texto */
-.footer-custom-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  width: 100%;
-}
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-.left-col {
-  width: 55%;
-}
+    <!-- Tabla de datos de autor y descripción -->
+    <table class="footer-table" style="width: 100%; border: none; margin: 0; padding: 0; background: transparent;">
+      <tr style="background: transparent;">
+        
+        <!-- Columna Izquierda: Tus datos -->
+        <td class="footer-td left-td" style="width: 55%; vertical-align: top; border: none; padding: 0 15px 0 0;">
+          <ul class="contact-list" style="margin: 0; padding: 0; list-style: none;">
+            <li style="margin-bottom: 2px;"><strong>{{ site.author | escape }}</strong></li>
+            <li style="margin-bottom: 2px;"><em style="white-space: nowrap;">Estudiante de Ingeniería Geomática y Topografía</em></li>
+            <li style="margin-bottom: 0;"><em>Precolegiado Nº PR00205</em></li>
+          </ul>
+        </td>
 
-.right-col {
-  width: 45%;
-}
+        <!-- Columna Derecha: Descripción -->
+        <td class="footer-td right-td" style="width: 45%; vertical-align: top; border: none; padding: 0;">
+          <p style="margin: 0;">{{ site.description | escape }}</p>
+        </td>
 
-/* 3. Regla para móviles: Pone la descripción debajo de tus datos */
-@media screen and (max-width: 760px) {
-  .footer-custom-layout {
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
+      </tr>
+    </table>
 
-  .left-col, .right-col {
-    width: 100% !important;
-  }
-}
+    <!-- ESTILOS DE REDES SOCIALES -->
+    <style>
+    .social-icons-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-icon-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+
+    .social-icon-img {
+      height: 38px !important;
+      width: auto !important;
+      object-fit: contain;
+    }
+
+    .social-icon-link:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+    </style>
+
+    <!-- SECCIÓN DE REDES SOCIALES CON RUTAS CORREGIDAS -->
+    <div class="social-icons-grid">
+      <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="LinkedIn" class="social-icon-link">
+        <img src="{{ '/assets/img/LinkedIn logo Negro.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
+      </a>
+      <a href="https://github.com/floger17" target="_blank" title="GitHub" class="social-icon-link">
+        <img src="{{ '/assets/img/HitHub_Negro.png' | relative_url }}" alt="GitHub" class="social-icon-img">
+      </a>
+      <a href="https://www.coigt.com/profesional/PR00205" target="_blank" title="Precolegiado COIGT" class="social-icon-link">
+        <img src="{{ '/assets/img/Escudo_Oficial_COIGT_NEGRO_SIMPLE.PNG' | relative_url }}" alt="COIGT" class="social-icon-img">
+      </a>
+      <a href="https://www.instagram.com/fabioreg2002?igsh=ajEwdjZ5ZjNxejNn" target="_blank" title="Instagram" class="social-icon-link">
+        <img src="{{ '/assets/img/Instagram.PNG' | relative_url }}" alt="Instagram" class="social-icon-img">
+      </a>
+    </div>
+
+  </div>
+</footer>
