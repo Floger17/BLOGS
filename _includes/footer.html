@@ -1,64 +1,72 @@
 <footer class="site-footer h-card">
   <div class="wrapper">
-    <!-- Contenedor principal que gestiona las columnas -->
+    
+    <!-- Contenedor de columnas adaptables -->
     <div class="footer-layout">
       
       <!-- Bloque 1: Identidad -->
       <div class="footer-col">
-        <p><strong>Geomática y Topografía</strong></p>
-        <p><strong>Fabio Regolf Ariño</strong></p>
-        <p style="font-size: 0.9em; font-style: italic;">Estudiante de Ingeniería Geomática y Topografía<br>Precolegiado Nº PR00205</p>
+        <p class="footer-title"><strong>Geomática y Topografía</strong></p>
+        <p class="footer-author"><strong>Fabio Regolf Ariño</strong></p>
+        <p class="footer-sub"><em>Estudiante de Ingeniería Geomática y Topografía</em></p>
+        <p class="footer-sub"><em>Precolegiado Nº PR00205</em></p>
       </div>
 
       <!-- Bloque 2: Descripción -->
       <div class="footer-col">
-        <p>Diario de un estudiante de Ingeniería Geomática y Topografía. Experiencias en prácticas, divulgación y reflexiones.</p>
+        <p class="footer-desc">Diario de un estudiante de Ingeniería Geomática y Topografía. Experiencias en prácticas, divulgación y reflexiones.</p>
       </div>
-      
+
     </div>
 
-    <!-- Redes sociales (mantenemos las que ya tenías) -->
+    <!-- Enlaces a redes sociales -->
     <div class="footer-social-wrapper">
-      {%- if site.minima.social_links -%}
-        <ul class="social-media-list">
-          {%- for social in site.minima.social_links -%}
-            <li><a href="{{ social.user_url | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#' | append: social.platform | relative_url }}"></use></svg> <span class="username">{{ social.platform }}</span></a></li>
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
+      <ul class="social-links-list">
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/floger17" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
     </div>
+
   </div>
 </footer>
 
 <style>
-  /* Layout: Dos columnas en grande, una columna en móvil */
   .footer-layout {
     display: flex;
-    flex-wrap: wrap; /* Esto permite que bajen de línea si no caben */
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 20px;
-    border-top: 1px solid #e8e8e8;
-    padding-top: 20px;
+    padding-top: 15px;
   }
 
   .footer-col {
-    flex: 1 1 300px; /* Ancho mínimo de 300px por columna */
-    min-width: 250px;
+    flex: 1 1 280px;
+    min-width: 0;
   }
+
+  .footer-title, .footer-author { margin: 0 0 4px 0; }
+  .footer-sub { margin: 0; font-size: 0.9em; color: #555; }
+  .footer-desc { margin: 0; line-height: 1.5; color: #444; }
 
   .footer-social-wrapper {
-    text-align: center;
     border-top: 1px solid #e8e8e8;
-    padding-top: 10px;
+    padding-top: 15px;
+    text-align: center;
   }
 
-  /* Centrar los iconos en móvil */
-  .social-media-list {
+  .social-links-list {
     display: flex;
     justify-content: center;
+    gap: 20px;
     list-style: none;
+    margin: 0;
     padding: 0;
-    gap: 15px;
+  }
+
+  .social-links-list a {
+    font-weight: bold;
+    text-decoration: none;
   }
 </style>
