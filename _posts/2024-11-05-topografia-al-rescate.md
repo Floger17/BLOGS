@@ -37,13 +37,14 @@ Las conclusiones del trabajo muestran que la apertura de las presas no son las c
 Otras conclusiones que se sacan es que las viviendas próximas a las carreteras y ferrocarriles, más afectados se han visto.
 
 Ejemplos:
-**La Torre:** Sitiada por el ferrocarril, CV-407, la avenida del Sur (CV-400) y el nuevo cauce del Turia. Con cotas de 1.925 en las casitas que están cerca de la CV-406 y de la Avenida Real de Madrid y cotas de más de 2 metros en el campo de fútbol del Discóbolo A.C y de 1.79 en la C/Ismael Blat Pintor y C/de Giménez i Costa.
 
-**Horno de Alcedo:** Sitiada por el ferrocarril, cauce nuevo del Turia y la pista de Silla (V-31). A mayor proximidad del cauce nuevo del Turia (llegaba a superar fácilmente el metro de altura en las edificaciones próximas al cauce y de la Avenida Europa) y cuanto mayor sea la proximidad a la V-31 mayor era la cota (superando sin dificultades los 2 metros, como en la barraca que hay en la calle camino de Alabau) y edificios próximos a la pista de Silla.
+* **La Torre:** Sitiada por el ferrocarril, CV-407, la avenida del Sur (CV-400) y el nuevo cauce del Turia. Con cotas de 1.925 en las casitas que están cerca de la CV-406 y de la Avenida Real de Madrid y cotas de más de 2 metros en el campo de fútbol del Discóbolo A.C y de 1.79 en la C/Ismael Blat Pintor y C/de Giménez i Costa.
 
-**Castellar-l'Oliveral:** Comprendida entre la pista de Silla y la Avenida del Doctor Ruiz i Comes, las edificaciones próximas a esta avenida superaba el metro sin dificultades.
+* **Horno de Alcedo:** Sitiada por el ferrocarril, cauce nuevo del Turia y la pista de Silla (V-31). A mayor proximidad del cauce nuevo del Turia (llegaba a superar fácilmente el metro de altura en las edificaciones próximas al cauce y de la Avenida Europa) y cuanto mayor sea la proximidad a la V-31 mayor era la cota (superando sin dificultades los 2 metros, como en la barraca que hay en la calle camino de Alabau) y edificios próximos a la pista de Silla.
 
-**Pinedo:** La autopista del Saler (CV-500) al estar más elevado sirvió de dique de contención, salvando a la población de la inundación.
+* **Castellar-l'Oliveral:** Comprendida entre la pista de Silla y la Avenida del Doctor Ruiz i Comes, las edificaciones próximas a esta avenida superaba el metro sin dificultades.
+
+* **Pinedo:** La autopista del Saler (CV-500) al estar más elevado sirvió de dique de contención, salvando a la población de la inundación.
 Con estos ejemplos se expresa que las carreteras y ferrocarriles pueden alterar las inundaciones.
 
 Otra conclusión es que la topografía, (como es de esperar), es también un agente importante.
