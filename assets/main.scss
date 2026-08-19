@@ -2,11 +2,17 @@
 ---
 @import "minima";
 
-/* Diseño fluido y profesional adaptado a móviles */
+/* 1. Ocultar el enlace "subscribe via RSS" de la página de inicio */
+.feed-subscribe, 
+a[href$="feed.xml"] {
+  display: none !important;
+}
+
+/* 2. Ajuste para que las columnas no se rompan en móviles verticales */
 @media screen and (max-width: 760px) {
   .site-footer .wrapper {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   .footer-col-wrapper {
@@ -19,9 +25,4 @@
     width: 100% !important;
     margin-bottom: 0 !important;
   }
-}
-
-/* Ocultar el enlace de suscripción RSS */
-.feed-subscribe {
-  display: none !important;
 }
