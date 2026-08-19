@@ -86,7 +86,17 @@ En esta última localidad fue curioso, porque fue la última población de estud
 
 Tras mis salidas de campo, dada la gran cantidad de mediciones que hice (1113/6500 mediciones con la mira topográfica) tuve el privilegio de poder participar en una parte de la segunda fase, en la validación de mis puntos con QGIS y en gabinete. Todos los 1113 puntos fueron supervisados y comprobados.
 
-Recuerdo que esto del gabinete, iba después de mis clases por las mañanas me pasaba por el CGAT y hacía mi tarea, algunas veces empezaba a las 12:00 y terminaba a las 18:00 o incluso más tarde. Pero a mi entender, sí mereció la pena, porque el 29 de enero de 2025 salió el proyecto publicado, y tuvo mucha repercusión mediática y en los periódicos. Saliendo en periódicos como El País, Las Provincias, El Levante E.M.V, Valencia Secreta, Europa Press, y en páginas web de RTVE, Onda Cero, y otros medios como La Cuatro, Telecinco... y otros medios locales como À Punt o la 7TeleValencia. Y como no, al ser un proyecto del CGAT, perteneciente a mi escuela, la ETSIGCT, también publicaron la noticia en sus páginas webs y redes sociales, tanto la ETSIGCT, como la UPV como a su vez, el COIGT, el Ilustre Colegio Oficial de Ingenieros en Geomática y Topografía, del cual, soy precolegiado, y a su vez, estuvimos en la Feria del Invento de la Ciudad de las Artes y las Ciencias del viernes 9 de mayo, evento que fue abierta al público, y este proyecto, sus frutos dio, al ser datos que manejan ayuntamientos afectados por la DANA, la Confederación Hidrográfica del Júcar (CHJ) y el Institut Cartogràfic Valencià (ICV) con la capa de "UPV" como ente que ha aportado datos.
+Recuerdo que esto del gabinete, iba después de mis clases por las mañanas me pasaba por el CGAT y hacía mi tarea, algunas veces empezaba a las 12:00 y terminaba a las 18:00 o incluso más tarde. Pero a mi entender, sí mereció la pena, porque el 29 de enero de 2025 salió el proyecto publicado, y tuvo mucha repercusión mediática y en los periódicos. Saliendo en periódicos como El País, Las Provincias, El Levante E.M.V, Valencia Secreta, Europa Press, y en páginas web de RTVE, Onda Cero, y otros medios como La Cuatro, Telecinco... y otros medios locales como À Punt o la 7TeleValencia. Y como no, al ser un proyecto del CGAT, perteneciente a mi escuela, la ETSIGCT, también publicaron la noticia en sus páginas webs y redes sociales, tanto la ETSIGCT, como la UPV como a su vez, el COIGT, el Ilustre Colegio Oficial de Ingenieros en Geomática y Topografía, del cual, soy precolegiado, y a su vez, estuvimos en la Feria del Invento de la Ciudad de las Artes y las Ciencias del viernes 9 de mayo, evento que fue abierta al público.
+
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ '/assets/img/FERIA_DEL_INVENTO.png' | relative_url }}" alt="Este soy yo en la Feria del Invento de la UPV." style="max-width: 100%; height: auto; border-radius: 8px;">
+  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
+    Este soy yo en la Feria del Invento de la UPV.
+  </figcaption>
+</figure>
+
+
+Y este proyecto, sus frutos dio, al ser datos que manejan ayuntamientos afectados por la DANA, la Confederación Hidrográfica del Júcar (CHJ) y el Institut Cartogràfic Valencià (ICV) con la capa de "UPV" como ente que ha aportado datos.
 
 <figure style="text-align: center; margin: 2rem 0;">
   <img src="{{ '/assets/img/Captura_ICV.png' | relative_url }}" alt="Captura de pantalla del visor del ICV" style="max-width: 100%; height: auto; border-radius: 8px;">
