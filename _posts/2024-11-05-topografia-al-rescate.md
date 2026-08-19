@@ -32,8 +32,22 @@ Durante los meses de noviembre del 2024 hasta mayo de 2025 se han realizado un t
 ## Fase 2: Validación de datos y generación de los modelos de lamina de agua
 En esta segunda fase, se ha realizado en gabinete, primero, la comprobación de los datos obtenidos. Posteriormente la creación de la lámina de agua.
 
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ '/assets/img/GABINETE_DANA.jpg' | relative_url }}" alt="En gabinete validando las mediciones en QGIS." style="max-width: 100%; height: auto; border-radius: 8px;">
+  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
+    En gabinete validando las mediciones en QGIS.
+  </figcaption>
+</figure>
+
 ## Fase 3: Mapa final
 En la última fase se ha realizado el mapa, con una rampa de colores, en el que los colores azules son cotas bajas, y a mayor color cálido y rojizo mayor altura. Y creación de un visor interactivo.
+
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ '/assets/img/MAPA_FINAL_DANA.jpg' | relative_url }}" alt="Mapa final del proyecto." style="max-width: 100%; height: auto; border-radius: 8px;">
+  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
+    Mapa final del proyecto.
+  </figcaption>
+</figure>
 
 ## Conclusiones
 Las conclusiones del trabajo muestran que la apertura de las presas no son las causantes de esta crecida de los ríos Turia, Magro y del barranco del Poyo.
