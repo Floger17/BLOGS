@@ -1,1 +1,21 @@
+---
+---
+@import "minima";
 
+/* Ajuste Responsive para que el pie de página NO se corte en móvil vertical */
+.site-footer .wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.footer-col-wrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
+}
+
+.footer-col {
+  flex: 1 1 250px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
