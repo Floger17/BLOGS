@@ -22,7 +22,7 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* Banner con Curvas de Nivel */
+  /* Banner con Curvas de Nivel y Borde Técnico */
   .topo-hero {
     background-color: #0f172a;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='200' viewBox='0 0 600 200'%3E%3Cpath d='M-50,150 Q150,50 350,120 T750,80' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.5'/%3E%3Cpath d='M-50,120 Q150,20 350,90 T750,50' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3Cpath d='M-50,90 Q150,-10 350,60 T750,20' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3Cpath d='M-50,180 Q150,80 350,150 T750,110' fill='none' stroke='rgba(37,99,235,0.4)' stroke-width='2'/%3E%3C/svg%3E");
@@ -31,6 +31,7 @@ title: Inicio
     padding: 2.2rem 1.8rem;
     border-radius: 10px;
     margin-bottom: 2rem;
+    border: 1px solid #334155; /* Borde de marco técnico */
   }
 
   .topo-hero h1 {
@@ -62,12 +63,11 @@ title: Inicio
   /* REJILLA DE TARJETAS (GRID) */
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en PC */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-top: 1rem;
   }
 
-  /* Móvil: 1 sola columna */
   @media screen and (max-width: 650px) {
     .posts-grid {
       grid-template-columns: 1fr !important;
@@ -92,7 +92,6 @@ title: Inicio
     border-color: #2563eb;
   }
 
-  /* CONTENEDOR DE LA IMAGEN */
   .post-card-image-wrapper {
     width: 100%;
     height: 180px;
@@ -109,10 +108,9 @@ title: Inicio
   }
 
   .post-card:hover .post-card-image {
-    transform: scale(1.05); /* Efecto zoom suave al pasar el ratón */
+    transform: scale(1.05);
   }
 
-  /* CUERPO DE LA TARJETA (INFERIOR) */
   .post-card-body {
     padding: 1.2rem;
     display: flex;
@@ -152,25 +150,19 @@ title: Inicio
 <div class="posts-grid">
   {% for post in site.posts %}
     <a href="{{ post.url | relative_url }}" class="post-card">
-      
-      <!-- IMAGEN DE LA TARJETA -->
       <div class="post-card-image-wrapper">
         {% if post.image %}
           <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card-image">
         {% else %}
-          <!-- Imagen por defecto si la entrada no tiene foto asignada -->
           <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Topografía" class="post-card-image">
         {% endif %}
       </div>
-
-      <!-- TEXTO INFERIOR -->
       <div class="post-card-body">
         <div>
           <span class="post-card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
           <h3 class="post-card-title">{{ post.title }}</h3>
         </div>
       </div>
-
     </a>
   {% endfor %}
 </div>
