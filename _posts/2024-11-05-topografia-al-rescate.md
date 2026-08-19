@@ -21,12 +21,11 @@ El proyecto se llama "DANA carrer a carrer" (en castellano "*DANA calle a calle*
 La primera parte del proyecto, consistió en hacer una salida de campo con una mira topográfica y con una aplicación móvil QField, donde, a partir de mirar la altura de la lámina de agua con una mira topográfica, se sitúa el lugar, poniendo la medición, la altura del agua, alguna observación a tener en cuenta, y con la posibilidad de poder introducir una fotografía con el teléfono.
 
 <figure style="text-align: center; margin: 2rem 0;">
-  <img src="assets/img/MIRA_TOPOGRAFICA.jpg" alt="Descripción de la imagen" style="max-width: 100%; height: auto; border-radius: 8px;">
+  <img src="{{ '/assets/img/MIRA_TOPOGRAFICA.jpg' | relative_url }}" alt="Imagen de una mira topográfica. Medición en Horno de Alcedo (Valencia)." style="max-width: 100%; height: auto; border-radius: 8px;">
   <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
     Imagen de una mira topográfica. Medición en Horno de Alcedo (Valencia).
   </figcaption>
 </figure>
-
 
 Durante los meses de noviembre del 2024 hasta mayo de 2025 se han realizado un total de 6500 mediciones, de las cuales, mis aportaciones fueron considerables, con 1113 mediciones en las pedanías de La Torre, Horno de Alcedo y Castellar-l'Oliveral, y municipios como Sedaví, Alfafar, Massanassa, Mislata, Torrent y área de la Albufera, y todas las mediciones han sido en la comarca de l'Horta Sud, la mayoría en zonas urbanas, como a su vez en áreas rústicas. La localización utilizada fue con el GPS de los propios teléfonos móviles, con el fondo de Open Street Map (OSM) y la ortofoto del PNOA.  se procederá a la validación en gabinete con el software QGIS.
 
