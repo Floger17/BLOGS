@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Topografía y edificación"
+date: 07/09/2025
+---
 <style>
 /* Justifica todos los párrafos y listas del artículo */
 main p, main ul, main ol {
