@@ -2,6 +2,7 @@
 layout: post
 title: "Topografía y edificación"
 date: 07/09/2025
+image: /assets/img/TOPO1.jpg
 ---
 <style>
 /* Justifica todos los párrafos y listas del artículo */
