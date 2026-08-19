@@ -9,6 +9,14 @@ title: Inicio
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+  /* FONDO DE PÁGINA CON CURVAS DE NIVEL */
+  body {
+    background-color: #f8fafc;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cpath d='M-100,250 Q200,100 500,220 T1100,180' fill='none' stroke='rgba(148, 163, 184, 0.25)' stroke-width='1.5'/%3E%3Cpath d='M-100,200 Q200,50 500,170 T1100,130' fill='none' stroke='rgba(148, 163, 184, 0.18)' stroke-width='1'/%3E%3Cpath d='M-100,150 Q200,0 500,120 T1100,80' fill='none' stroke='rgba(148, 163, 184, 0.12)' stroke-width='1'/%3E%3Cpath d='M-100,300 Q200,150 500,270 T1100,230' fill='none' stroke='rgba(37, 99, 235, 0.2)' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   /* Tipografía Gotham / Montserrat */
   h1, h2, h3, .post-card-title, .badge-topografia {
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
