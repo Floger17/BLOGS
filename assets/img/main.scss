@@ -1,1 +1,21 @@
+---
+---
+@import "minima";
 
+/* Ajuste para que el texto del footer NO se corte en móviles (apilamiento vertical) */
+.site-footer .wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.footer-col-wrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
+}
+
+.footer-col {
+  flex: 1 1 250px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
