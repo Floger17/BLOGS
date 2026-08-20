@@ -21,8 +21,6 @@ permalink: /about/
   }
 </style>
 
-# Sobre el blog
-
 ## El Proyecto
 Este espacio nace como un **cuaderno de campo digital** enfocado en la **Geomática, la Topografía y las Ciencias de la Tierra**. Aquí documento mi evolución, análisis técnicos, procesamiento de datos espaciales y reflexiones sobre la profesión a partir de mi experiencia práctica en proyectos reales.
 
