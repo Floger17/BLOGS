@@ -32,5 +32,5 @@ Mantengo este blog como muestra de mi compromiso y rigor con la ingeniería geoe
 
 <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
   <a href="mailto:fabioregolf7@gmail.com" class="btn" style="background-color: #8a4939; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold;">📩 Contactar por Email</a>
-  <a href="https://www.linkedin.com" target="_blank" class="btn" style="background-color: #0e76a8; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold;">🔗 Perfil de LinkedIn</a>
+  <a href="https://www.linkedin.com/in/fabio-regolf-ariño-a58305328/" target="_blank" class="btn" style="background-color: #0e76a8; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold;">🔗 Perfil de LinkedIn</a>
 </div>
