@@ -4,6 +4,8 @@ title: Sobre el blog
 permalink: /about/
 ---
 
+<style> /* Justifica todos los párrafos y listas del artículo */ main p, main ul, main ol { text-align: justify; } /* Mantiene el pie de foto centrado */ figcaption { text-align: center !important; } </style>
+
 # Sobre el blog
 
 ## El Proyecto
