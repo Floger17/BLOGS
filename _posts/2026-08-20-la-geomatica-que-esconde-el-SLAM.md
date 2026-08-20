@@ -2,7 +2,7 @@
 layout: post
 title: "La Geomática que esconde el SLAM"
 date: 20/08/2026
-image: /assets/img/SLAM5.jpg
+image: /assets/img/SLAM4.jpg
 ---
 
 <style> /* Justifica todos los párrafos y listas del artículo */ main p, main ul, main ol { text-align: justify; } /* Mantiene el pie de foto centrado */ figcaption { text-align: center !important; } </style>
