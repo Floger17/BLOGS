@@ -93,7 +93,7 @@ La cultura del almuerzo no muere nunca, y desde luego, aprendí que, donde iban 
 También, aprendí que, cuando los peones se iban a almorzar y me quedaba en la obra solo, era realmente el momento opportuno para apretar y avanzar faena antes de que regresaran para no tener incidentes de que dejan obstáculos por ahí, o simplemente, se ponen entre la estación y el topógrafo. Y cuando regresan, es en ocasiones, el turno del almuerzo. Aprendí esas maneras de anticiparse a obstáculos futuros y meterle caña de verdad. 
 
 <figure style="text-align: center; margin: 2rem 0;">
-  <img src="{{ '/assets/img/MIRA_TOPOGRAFICA.jpg' | relative_url }}" alt="Un buen almuerzo antes de volver al trabajo." style="max-width: 50%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+  <img src="{{ '/assets/img/ALMUERZO.jpg' | relative_url }}" alt="Un buen almuerzo antes de volver al trabajo." style="max-width: 50%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
   <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
     Un buen almuerzo antes de volver al trabajo.
   </figcaption>
