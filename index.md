@@ -25,13 +25,14 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* BANNER PRINCIPAL */
+ /* BANNER PRINCIPAL */
   .topo-hero {
     background-color: #ffffff;
-    /* Isolíneas suaves de ladera coordinadas en el banner */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='250' viewBox='0 0 800 250'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1' opacity='0.18'%3E%3Cpath d='M-50,220 C150,180 300,100 500,20 T850,-20'/%3E%3Cpath d='M-50,250 C170,200 330,120 530,30 T850,-10' stroke-width='1.5' opacity='0.28'/%3E%3Cpath d='M-50,280 C190,220 360,140 560,40 T850,0'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: cover;
-    background-position: center;
+    /* Red de isolíneas orgánicas densas en color siena (#8a4939) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='300' viewBox='0 0 900 300'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1.2' opacity='0.25'%3E%3Cpath d='M900,0 C820,30 780,90 900,140'/%3E%3Cpath d='M900,0 C760,50 710,120 900,180'/%3E%3Cpath d='M900,0 C700,70 640,150 900,220' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M900,0 C640,90 570,180 900,260'/%3E%3Cpath d='M900,0 C580,110 500,210 900,300'/%3E%3Cpath d='M900,0 C520,130 430,240 850,300'/%3E%3Cpath d='M900,0 C460,150 360,270 750,300' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M900,0 C400,170 290,290 650,300'/%3E%3Cpath d='M900,0 C340,190 220,300 550,300'/%3E%3Cpath d='M900,0 C280,210 150,300 450,300'/%3E%3Cpath d='M900,0 C220,230 80,300 350,300' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M900,0 C160,250 10,300 250,300'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
     padding: 2.2rem 1.8rem;
     border-radius: 12px;
     margin-bottom: 2rem;
