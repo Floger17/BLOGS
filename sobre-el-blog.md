@@ -1,3 +1,9 @@
+---
+layout: page
+title: Sobre el blog
+permalink: /about/
+---
+
 # Sobre el blog
 
 ## El Proyecto
