@@ -9,14 +9,14 @@ title: Inicio
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-  /* FONDO DE PÁGINA: ESTILO OFICIAL COIGT (Curvas en esquina superior derecha) */
+  /* FONDO DE PÁGINA: ESTILO FIEL AL MANUAL DE MARCA COIGT */
   body {
-    background-color: #fcfbf9; /* Tono papel técnico cálido del COIGT */
-    /* Vector SVG denso naciendo desde la esquina superior derecha */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1.2' opacity='0.22'%3E%3Cpath d='M1000,0 C980,50 970,100 1000,150'/%3E%3Cpath d='M1000,0 C950,70 930,140 1000,200'/%3E%3Cpath d='M1000,0 C920,90 890,180 1000,260'/%3E%3Cpath d='M1000,0 C880,120 840,220 1000,320'/%3E%3Cpath d='M1000,0 C840,150 790,260 1000,380'/%3E%3Cpath d='M1000,0 C800,180 740,300 1000,440' stroke-width='1.8' opacity='0.35'/%3E%3Cpath d='M1000,0 C750,210 680,350 1000,500'/%3E%3Cpath d='M1000,0 C700,250 620,400 1000,570'/%3E%3Cpath d='M1000,0 C640,290 550,460 1000,640'/%3E%3Cpath d='M1000,0 C580,330 480,520 1000,720'/%3E%3Cpath d='M1000,0 C510,380 400,590 1000,810' stroke-width='1.8' opacity='0.35'/%3E%3Cpath d='M1000,0 C440,430 310,670 1000,910'/%3E%3Cpath d='M1000,0 C360,490 210,760 1000,1000'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #ffffff; /* Fondo blanco limpio como la papelería del COIGT */
+    /* Masa densa de isolíneas orgánicas (ladera/cumbre) naciendo en la esquina superior derecha */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1.2' opacity='0.28'%3E%3Cpath d='M1000,120 C950,110 920,80 1000,40'/%3E%3Cpath d='M1000,180 C910,160 860,110 1000,60'/%3E%3Cpath d='M1000,240 C870,210 800,140 1000,80'/%3E%3Cpath d='M1000,300 C830,260 740,170 1000,100' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M1000,360 C790,310 680,200 1000,120'/%3E%3Cpath d='M1000,420 C750,360 620,230 1000,140'/%3E%3Cpath d='M1000,480 C710,410 560,260 1000,160'/%3E%3Cpath d='M1000,540 C670,460 500,290 1000,180' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M1000,600 C630,510 440,320 1000,200'/%3E%3Cpath d='M1000,660 C590,560 380,350 1000,220'/%3E%3Cpath d='M1000,720 C550,610 320,380 1000,240'/%3E%3Cpath d='M1000,780 C510,660 260,410 1000,260' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M1000,840 C470,710 200,440 1000,280'/%3E%3Cpath d='M1000,900 C430,760 140,470 1000,300'/%3E%3Cpath d='M1000,960 C390,810 80,500 1000,320'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: top right; /* Anclado a la esquina superior derecha */
-    background-size: 750px auto; /* Tamaño equilibrado para no invadir el texto */
+    background-position: top right;
+    background-size: 850px auto;
     background-attachment: fixed;
   }
 
@@ -28,8 +28,8 @@ title: Inicio
   /* BANNER PRINCIPAL */
   .topo-hero {
     background-color: #ffffff;
-    /* Curvas suaves siena en el hero para coordinar con el fondo */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='250' viewBox='0 0 800 250'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1' opacity='0.15'%3E%3Cpath d='M-50,150 Q150,50 350,120 T750,80'/%3E%3Cpath d='M-50,120 Q150,20 350,90 T750,50'/%3E%3Cpath d='M-50,180 Q150,80 350,150 T750,110' stroke-width='1.5' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+    /* Isolíneas suaves de ladera coordinadas en el banner */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='250' viewBox='0 0 800 250'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1' opacity='0.18'%3E%3Cpath d='M-50,220 C150,180 300,100 500,20 T850,-20'/%3E%3Cpath d='M-50,250 C170,200 330,120 530,30 T850,-10' stroke-width='1.5' opacity='0.28'/%3E%3Cpath d='M-50,280 C190,220 360,140 560,40 T850,0'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
     padding: 2.2rem 1.8rem;
@@ -40,13 +40,13 @@ title: Inicio
   }
 
   .topo-hero h1 {
-    color: #1e293b !important;
+    color: #0f172a !important;
     font-weight: 800;
     font-size: 2rem;
     margin: 0 0 0.4rem 0;
   }
 
-  /* Badge adaptado a los tonos siena/topográficos */
+  /* Badge adaptado a la estética topográfica siena */
   .badge-topografia {
     display: inline-block;
     background: #fdf6f0;
@@ -62,7 +62,7 @@ title: Inicio
   }
 
   .topo-hero p {
-    color: #475569;
+    color: #334155;
     margin: 0;
   }
 
