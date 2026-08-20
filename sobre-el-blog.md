@@ -29,22 +29,22 @@ Mi objetivo con esta plataforma es conectar la teoría académica con la realida
 ---
 
 ## El Autor
-Me llamo **Fabio Regolf Ariño** y me encuentro en la fase final del **Grado en Ingeniería en Geomática y Topografía** en la *Universitat Politècnica de València (UPV)*.[cite: 1]
+Me llamo **Fabio Regolf Ariño** y me encuentro en la fase final del **Grado en Ingeniería en Geomática y Topografía** en la *Universitat Politècnica de València (UPV)*.
 
-Estoy precolegiado en el **Colegio Oficial de Ingeniería Geomática y Topográfica (COIGT)** con el **N.º PR00205**[cite: 1]. Entiendo la profesión desde la práctica continua: hasta la fecha he completado diversas estancias de prácticas en empresas e instituciones del sector (Acero Estudio, Zenit Topografía, iCerti) combinando trabajo de campo, geoinformática y captura de datos[cite: 1].
+Estoy precolegiado en el **Colegio Oficial de Ingeniería Geomática y Topográfica (COIGT)** con el **N.º PR00205**. Entiendo la profesión desde la práctica continua: hasta la fecha he completado diversas estancias de prácticas en empresas e instituciones del sector (Acero Estudio, Zenit Topografía, iCerti) combinando trabajo de campo, geoinformática y captura de datos.
 
-Además, formo parte como estudiante voluntario en el *Grupo de Cartografía GeoAmbiental y Teledetección (CGAT)* de la UPV, donde he aportado más de 1.100 mediciones de precisión sobre el terreno para la elaboración del **Mapa de Inundación de la DANA 2024 (l'Horta Sud)**, un proyecto cartográfico utilizado por entidades como la CHJ, el ICV y diversos ayuntamientos[cite: 1].
+Además, formo parte como estudiante voluntario en el *Grupo de Cartografía GeoAmbiental y Teledetección (CGAT)* de la UPV, donde he aportado más de 1.100 mediciones de precisión sobre el terreno para la elaboración del **Mapa de Inundación de la DANA 2024 (l'Horta Sud)**, un proyecto cartográfico utilizado por entidades como la CHJ, el ICV y diversos ayuntamientos.
 
 ---
 
 ## Capacidades y Áreas de Trabajo
 A lo largo de mi trayectoria académica y profesional he consolidado competencias en:
 
-* **Captura de Datos e Instrumentación:** Levantamientos con escáner láser móvil SLAM, estación total robotizada, receptores GNSS, niveles y fotogrametría[cite: 1].
-* **Geoinformática y Nubes de Puntos:** Tratamiento de datos vectoriales y ráster, procesamiento de nubes de puntos con CloudCompare, CoPre, ReCap y Agisoft Metashape[cite: 1].
-* **Sistemas de Información Geográfica (SIG):** Uso avanzado de QGIS, QField para trabajo de campo, gvSIG y ArcGIS Pro[cite: 1].
-* **Automatización y Programación:** Desarrollo de scripts en Python para la gestión masiva de archivos geoespaciales, además de manejo de SQL y MATLAB[cite: 1].
-* **Docencia Técnica:** Compagino mi actividad con las clases particulares de matemáticas, física e ingeniería, aplicando metodologías de enseñanza enfocadas en la comprensión analítica[cite: 1].
+* **Captura de Datos e Instrumentación:** Levantamientos con escáner láser móvil SLAM, estación total robotizada, receptores GNSS y niveles.
+* **Geoinformática y Nubes de Puntos:** Tratamiento de datos vectoriales y ráster, procesamiento de nubes de puntos con CloudCompare, CoPre, ReCap y Agisoft Metashape.
+* **Sistemas de Información Geográfica (SIG):** Uso avanzado de QGIS, QField para trabajo de campo, gvSIG y ArcGIS Pro.
+* **Automatización y Programación:** Desarrollo de scripts en Python para la gestión masiva de archivos geoespaciales, además de manejo de SQL y MATLAB.
+* **Docencia Técnica:** Compagino mi actividad con las clases particulares de matemáticas, física e ingeniería, aplicando metodologías de enseñanza enfocadas en la comprensión analítica.
 
 ---
 
