@@ -31,6 +31,14 @@ Tuve la suerte que en mis prácticas estuve en distintas obras, por lo que pude 
 ## Lección 2: Anticiparse a la obra.
 
 Muchas veces, en mis prácticas se exigía replantear por ejemplo, ascensores, escaleras y tuberías para una mañana, y para la siguiente vez que fuera se pedirán patinillos. Esto es un problema, porque, el día que se pide replantear tuberías, escaleras y ascensores, el piso está limpio y despejado, y cuando se vuelve a la obra para replantear los patinillos, resulta imposible porque el piso no está limpio, y con obstáculos, tanto para la visualización de los puntos, y pese a que se intente con el miniprisma a veces resulta imposible debido a los obstáculos entre la estación y el prisma, o porque simplemente han puesto ya los voladizos en el tablero y hace imposible replantear los patinillos. Y esto, es un problema muy claro para el topógrafo, por lo que nos obliga a cambiar de estación, clavando un nuevo punto de estacionamiento. Por consecuencia, siempre hay que anticiparse en medidas de lo posible, en la obra. Eso sí, también hay que estar en forma para poder subir y bajar el instrumental todos los pisos que toquen, mover obstáculos o quitar barandillas de manera temporal para poder tomar el punto y luego volver a colocar la valla.
+
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ '/assets/img/MIRA_TOPOGRAFICA.jpg' | relative_url }}" alt=" Ejemplo de voladizos que entorpecen la marcación de elementos." style="max-width: 50%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
+    Ejemplo de voladizos que entorpecen la marcación de elementos.
+  </figcaption>
+</figure>
+
 ## Lección 3: Salir al paso ante problemas.
 En relación a la lección nº 2. Esta lección va estrictamente ligada. Ante esos obstáculos que impiden el replanteo, se recurren a acciones que sirven para salir del paso. Una de ellas, es cambiar de punto de estacionamiento, esto no es un problema, ya que, con hacer intersección con otras bases de antes y dianas de los edificios colindantes se consiguen dar coordenadas al punto nuevo de estacionamiento. Pero como muchas veces, resulta que, a la hora de querer visar una base de estacionamiento con el miniprisma puede haber obstáculos de visibilidad o directamente han colocado un saco o ladrillos encima del punto de estacionamiento, y pese a haberse señalizado con aerosol y rotulador en el cemento que es un punto de estacionamiento y por lo cual, es importante para la ejecución del trabajo de los topógrafos. Ante este imprevisto, se pueden crear nuevos puntos para visar y hacer la intersección, como por ejemplo, hacer una marca en un pilar. 
 
@@ -83,6 +91,13 @@ Por eso, cada vez que vi al gruista trasportar carga de un lado a otro y cerca d
 La cultura del almuerzo no muere nunca, y desde luego, aprendí que, donde iban la mayoría de obreros, implicaba que el bar al que iban a comerse un chivito o de tortilla, es que estaba bueno, en cambio, los bares a los que no había mucha gente, las probabilidades de acertar en un buen almuerzo se reducen drásticamente. 
 
 También, aprendí que, cuando los peones se iban a almorzar y me quedaba en la obra solo, era realmente el momento opportuno para apretar y avanzar faena antes de que regresaran para no tener incidentes de que dejan obstáculos por ahí, o simplemente, se ponen entre la estación y el topógrafo. Y cuando regresan, es en ocasiones, el turno del almuerzo. Aprendí esas maneras de anticiparse a obstáculos futuros y meterle caña de verdad. 
+
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ '/assets/img/MIRA_TOPOGRAFICA.jpg' | relative_url }}" alt="Un buen almuerzo antes de volver al trabajo." style="max-width: 50%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
+    Un buen almuerzo antes de volver al trabajo.
+  </figcaption>
+</figure>
 
 ## Lección 9: No se nos valora lo suficiente.
 
