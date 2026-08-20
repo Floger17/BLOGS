@@ -33,8 +33,8 @@ Dentro de la propia aplicación móvil de captura (*SmartGo Neo*), la parametriz
 
 A menudo se asume que operar un escáner SLAM consiste únicamente en encender el equipo y caminar. Sin embargo, la propia ficha técnica del CHCNAV RS7 pone de manifiesto la necesidad imperiosa del criterio geomático:
 
-* **Deriva inercial (IMU):** Una inestabilidad de sesgo de giroscopio de 0.5/h es un dato excelente, pero evidencia matemática de que el error inercial se acumula con el tiempo. Ignorar esto y realizar itinerarios infinitos sin cierres de bucle ni bases de apoyo es condenar la nube a una deformación geométrica.
-* **Reflectividad y física del láser:** Un alcance de 40m sobre un 10% de reflectividad exige al operador entender cómo absorben la onda de 905nm las superficies húmedas o la vegetación en obras de drenaje, obligando a planificar las distancias de pasada con criterio.
+* **Deriva inercial (IMU):** Una inestabilidad de sesgo de giroscopio de 0.5°/h es un dato excelente, pero evidencia matemática de que el error inercial se acumula con el tiempo. Ignorar esto y realizar itinerarios infinitos sin cierres de bucle ni bases de apoyo es condenar la nube a una deformación geométrica.
+* **Reflectividad y física del láser:** Un alcance de 40 m sobre un 10% de reflectividad exige al operador entender cómo absorben la onda de 905 nm las superficies húmedas o la vegetación en obras de drenaje, obligando a planificar las distancias de pasada con criterio.
 * **Precisión Relativa vs. Absoluta:** Diferenciar entre la consistencia métrica interna (<1cm) y la georreferenciación global (<3cm RMS) evita el mito del "escaneo automático". Sin un diseño geométrico de GCPs y una selección analítica del protocolo de red en la colectora, la precisión absoluta se degrada.
 
 Interpretar los límites físicos de la instrumentación antes de salir a campo es la línea divisoria entre el rigor de la ingeniería geomática y el desconocimiento operativo.
@@ -54,7 +54,7 @@ Si el sensor no detecta cambios geométricos significativos a medida que se avan
 Durante las mediciones, surgió la cuestión operativa de si era conveniente descender a la base del barranco manteniendo las bases de referencia únicamente en la plataforma superior del puente. La respuesta desde la ingeniería geomática es tajante: **no**.
 
 1. **Despalancamiento vertical y pérdida de cota (Z):** Para que los puntos de control (GCPs) garanticen la precisión absoluta, deben envolver tridimensionalmente el objeto medido. Ubicar las bases exclusivamente en la calzada superior crea una geometría plana que deja "volando" el fondo del cauce, degradando la componente altimétrica.
-2. **Aceleración de la deriva inercial:** El tránsito por laderas escarpadas, suelos movedizos o vegetación obliga al operador a realizar giros bruscos y perder el paso fluido. Esto fuerza la aceleración del sesgo inercial de la IMU ($0.5^\circ/\text{h}$), introduciendo un error angular acumulado difícil de purgar.
+2. **Aceleración de la deriva inercial:** El tránsito por laderas escarpadas, suelos movedizos o vegetación obliga al operador a realizar giros bruscos y perder el paso fluido. Esto fuerza la aceleración del sesgo inercial de la IMU (0.5°/h), introduciendo un error angular acumulado difícil de purgar.
 3. **Trayectorias en "callejón sin salida":** Las bajadas a desnivel sin posibilidad de trazar recorridos circulares impiden ejecutar un **cierre de bucle (*Loop Closure*)** efectivo. Al no poder re-visitar un punto conocido para que el software distribuya y minimice el error acumulado, la trayectoria se convierte en una antena abierta propensa a la deformación.
 
 Rechazar un recorrido físicamente inviable en campo no es una negativa injustificada; es la aplicación estricta de la geodesia para garantizar que el producto final sea un plano de ingeniería y no un boceto tridimensional.
