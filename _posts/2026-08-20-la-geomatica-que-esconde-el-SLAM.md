@@ -96,6 +96,26 @@ Para no solapar los trabajos de campo con el topógrafo encargado de materializa
 
 Ninguno de estos protocolos me fue exigido. Nacieron de la necesidad de sustituir la improvisación por una metodología ordenada, garantizando la trazabilidad total del dato desde la colectora en campo hasta el entregable final. Después, extraía esa nueva capa en un .csv, y con un script en Pyhon, hice que me generase archivos `.txt` que eran únicamente y exclusivamente por Nombre y código, para luego, en CoPre, a la hora de introducir las bases del topógrafo, no tenía que estar buscando cuál era cuál y asiganrla a los puntos de control. A su vez, para llevar un control en tiempo real durante la salida de campo, usé Qfield, donde me generé una capa, en la que rellenaba fecha, autor del escaneado (ya que no iba solo), la opción a subir foto, comentario de alguna observación a tener en cuenta. Y tachar municpio que terminaba, que se tachara automáticamente al rellenar la casilla de si se había finalizado el municipio o no. Todo con el fin para llevar un control y un orden. Y esto, por cuenta propia, ya que nadie en su día me exigió que lo hiciera.
 
+### Experiencia en campo: Soluciones de emergencia sobre el terreno
+
+Con todo lo expuesto, al igual que en edificación existen técnicas e improvisaciones fiables para salir al paso... En el trabajo con SLAM también existieron esas formas ingeniosas de resolver imprevistos.
+
+*¿Qué sucede si, por ejemplo, de 4 bases realizadas por el topógrafo no localizo una de ellas?*
+
+Sencillamente, gracias a QField, estimaba cuán cerca o lejos estaba del punto original para posicionarme sobre él y tomarlo como punto de apoyo. Sabía perfectamente que en gabinete ese punto se descartaría para el cálculo de georreferenciación absoluta, pero realizar la pausa sobre él cumplía una función clave: darle estructura, cierre geométrico y robustez interna a la nube.
+
+*¿Y cuando directamente no hay bases?*
+
+La respuesta es aún más sencilla. Dado que no podía georreferenciar la nube por ausencia de coordenadas absolutas, improvisé una metodología para garantizar la consistencia métrica: cada cierto número de pasos colocaba dos ramas en forma de cruz en el centro del camino. Durante el itinerario, realizaba desplazamientos senoidales pasando obligatoriamente por dichas marcas, donde me detenía entre 10 y 20 segundos para registrar un punto de amarre relativo antes de continuar. Ante la falta de protocolos e instrucciones previas, el ingenio y los conocimientos adquiridos fueron la única vía para garantizar que el modelo no se deformara.
+
+*¿Cuál era el orden a seguir durante el itinerario?*
+
+Supongamos un esquema clásico con 4 bases (A, B, C y D). Por una cuestión pura de optimización de tiempos y eficiencia en campo, comenzaba la trayectoria por la base más próxima al vehículo (ya fuera A o D), diseñando a partir de ahí el circuito cerrado de ida y vuelta.
+
+*¿Qué hacer si las bases estaban en la plataforma del puente y el cauce era de difícil acceso?*
+
+Dado que se exigía precisión georreferenciada, la dependencia de las bases del topógrafo era total. Si la ladera presentaba una pendiente considerable, vegetación impenetrable o un riesgo alto de resbalón por la propia geomorfología del terreno, la decisión geomática fue categórica: **no intentar el descenso**. Forzar ese paso habría introducido una deriva inercial crítica en la cota ($Z$), imposibilitando un correcto ajuste geodésico y comprometiendo tanto la integridad física como los estándares exigidos para el proyecto.
+
 ### Visualizando el flujo: Del campo a la colectora
 
 Para entender este despliegue de control y organización, nada como ver la herramienta en su entorno real. Durante las jornadas en las ODTs, la combinación entre la colectora móvil y la planificación espacial fue la clave para no perder el rumbo entre decenas de infraestructuras:
