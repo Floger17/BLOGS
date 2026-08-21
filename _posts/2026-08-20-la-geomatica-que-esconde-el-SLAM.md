@@ -95,3 +95,40 @@ Para no solapar los trabajos de campo con el topógrafo encargado de materializa
 3. **Control de campo en tiempo real con QField:** Diseñé un formulario personalizado en *QField* para la colectora móvil. Registraba la fecha, el operador, fotografías del entorno, observaciones técnicas de la estructura y el estado de finalización del municipio (configurado con reglas de estilo para tachar automáticamente las zonas completadas).
 
 Ninguno de estos protocolos me fue exigido. Nacieron de la necesidad de sustituir la improvisación por una metodología ordenada, garantizando la trazabilidad total del dato desde la colectora en campo hasta el entregable final. Después, extraía esa nueva capa en un .csv, y con un script en Pyhon, hice que me generase archivos `.txt` que eran únicamente y exclusivamente por Nombre y código, para luego, en CoPre, a la hora de introducir las bases del topógrafo, no tenía que estar buscando cuál era cuál y asiganrla a los puntos de control. A su vez, para llevar un control en tiempo real durante la salida de campo, usé Qfield, donde me generé una capa, en la que rellenaba fecha, autor del escaneado (ya que no iba solo), la opción a subir foto, comentario de alguna observación a tener en cuenta. Y tachar municpio que terminaba, que se tachara automáticamente al rellenar la casilla de si se había finalizado el municipio o no. Todo con el fin para llevar un control y un orden. Y esto, por cuenta propia, ya que nadie en su día me exigió que lo hiciera.
+
+### Visualizando el flujo: Del campo a la colectora
+
+Para entender este despliegue de control y organización, nada como ver la herramienta en su entorno real. Durante las jornadas en las ODTs, la combinación entre la colectora móvil y la planificación espacial fue la clave para no perder el rumbo entre decenas de infraestructuras:
+
+![Interfaz de QField utilizada en campo para el control de ODTs y bases](/assets/img/TU_FOTO_QFIELD.jpg)
+*Figura 1: Capa personalizada en QField para el seguimiento en tiempo real, registro de observaciones y control de estado por municipios.*
+
+![Captura del escáner SLAM CHCNAV RS7 durante el levantamiento de una ODT](/assets/img/TU_FOTO_ODT.jpg)
+*Figura 2: Posicionamiento y flujo de pasada del CHCNAV RS7 en el entorno de una obra de drenaje transversal.*
+
+---
+
+## El contrapunto perfecto: La EDAR de Pinedo y el valor del trabajo en equipo
+
+Mi trayectoria en estas prácticas no se limitó a lidiar con barrancos complejos o limitaciones de hardware. El verdadero potencial de la tecnología SLAM —combinada con una metodología impecable— se hizo evidente cuando me asignaron el levantamiento de la Estación Depuradora de Aguas Residuales (EDAR) de Pinedo.
+
+En esta ocasión, compartí jornada con un compañero arquitecto: un profesional excepcional, con una calidad humana intachable y un respeto absoluto por el criterio geomático. A diferencia de otros escenarios donde se primaba la prisa sobre la técnica, aquí se estableció un diálogo técnico fluido desde el primer minuto.
+
+### Cuando el entorno y la metodología se alinean
+
+La EDAR de Pinedo presentaba un escenario idóneo para exprimir las fortalezas del escáner inercial:
+
+1. **Geometría rica y variada:** Tanques de decantación, estructuras rectangulares, canalizaciones visibles y edificaciones auxiliares. Un entorno repleto de planos limpios y bordes claros donde el algoritmo SLAM se "agarra" con precisión milimétrica, eliminando cualquier riesgo de degeneración geométrica.
+2. **Cierres de bucle perfectos (*Loop Closure*):** La distribución de la planta permitió diseñar itinerarios circulares continuos. Al poder re-visitar puntos de origen y cruzar trayectorias de forma limpia, el software pudo comprimir y redistribuir la pequeña deriva inercial de la IMU sin esfuerzo.
+3. **Georreferenciación rigurosa:** Se consolidaron bases de apoyo GNSS en zonas despejadas alrededor de las instalaciones, envolviendo tridimensionalmente el recinto.
+
+![Nube de puntos / Escaneo de la EDAR de Pinedo](/assets/img/TU_FOTO_PINEDO.jpg)
+*Figura 3: Levantamiento mediante SLAM en la EDAR de Pinedo, donde la riqueza geométrica del entorno permitió una precisión idónea.*
+
+El resultado final fue **simplemente excelente**. La nube de puntos no solo quedó perfectamente georreferenciada en el sistema global, sino que las comprobaciones métricas en gabinete mostraron tolerancias impecables, muy por debajo de los umbrales exigidos en edificación e ingeniería industrial.
+
+## Reflexión final
+
+Esta experiencia en Pinedo demostró la conclusión definitiva de mi paso por estas prácticas: **el escáner SLAM no es una varita mágica ni un juguete inservible; es un instrumento de precisión hiperdependiente del factor humano**. 
+
+Cuando se minusvalora la geodesia, se escatima en bases de apoyo o se trabaja con prisas a ciegas, la tecnología responde con datos inservibles. Pero cuando se respeta la física del sensor, se planifica la trayectoria con criterio geomático y existe una colaboración profesional basada en el respeto mutuo, el resultado roza la perfección.
