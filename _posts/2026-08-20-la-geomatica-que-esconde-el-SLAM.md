@@ -114,21 +114,21 @@ Mi trayectoria en estas prácticas no se limitó a lidiar con barrancos complejo
 
 En esta ocasión, compartí jornada con un compañero arquitecto: un profesional excepcional, con una calidad humana intachable y un respeto absoluto por el criterio geomático. A diferencia de otros escenarios donde se primaba la prisa sobre la técnica, aquí se estableció un diálogo técnico fluido desde el primer minuto.
 
-### Cuando el entorno y la metodología se alinean
+### Georreferenciación por NTRIP y encadenamiento de nubes en Pinedo
 
-La EDAR de Pinedo presentaba un escenario idóneo para exprimir las fortalezas del escáner inercial:
+En la EDAR de Pinedo prescindimos de la materialización previa de bases GNSS clásicas. En su lugar, configuré por primera vez en la colectora la conexión por correcciones **NTRIP en tiempo real** aprovechando la buena cobertura del entorno. Sin embargo, consciente de que el RTK por sí solo no garantiza la rigidez geométrica de nubes complejas, diseñé una estrategia de **encadenamiento relativo con puntos de apoyo en elementos claros**:
 
-1. **Geometría rica y variada:** Tanques de decantación, estructuras rectangulares, canalizaciones visibles y edificaciones auxiliares. Un entorno repleto de planos limpios y bordes claros donde el algoritmo SLAM se "agarra" con precisión milimétrica, eliminando cualquier riesgo de degeneración geométrica.
-2. **Cierres de bucle perfectos (*Loop Closure*):** La distribución de la planta permitió diseñar itinerarios circulares continuos. Al poder re-visitar puntos de origen y cruzar trayectorias de forma limpia, el software pudo comprimir y redistribuir la pequeña deriva inercial de la IMU sin esfuerzo.
-3. **Georreferenciación rigurosa:** Se consolidaron bases de apoyo GNSS en zonas despejadas alrededor de las instalaciones, envolviendo tridimensionalmente el recinto.
+1. **Selección de puntos de control naturales:** Identifiqué elementos estructurales indiscutibles y bien definidos en el propio recinto de la depuradora (esquinas de arquetas, vértices de tanques, marcas fijas) para usarlos como referencias de amarre.
+2. **Estrategia de enlace por solape (Puntos de transferencia):** Para dar continuidad entre escaneos sin generar descalibres, estructuré las pasadas de forma encadenada. Si la Nube 1 finalizaba apoyándose en un elemento claro (Punto D), la Nube 2 comenzaba tomando como origen exacto ese mismo Punto D de la Nube 1.
+3. **Aprovechamiento de la riqueza geométrica:** Los tanques de decantación, canalizaciones y edificaciones auxiliares ofrecían planos limpios continuos. Esto permitió que el algoritmo SLAM trabajara holgadamente, sin riesgo de degeneración ni pérdidas de trayectoria.
 
 ![Nube de puntos / Escaneo de la EDAR de Pinedo](/assets/img/TU_FOTO_PINEDO.jpg)
-*Figura 3: Levantamiento mediante SLAM en la EDAR de Pinedo, donde la riqueza geométrica del entorno permitió una precisión idónea.*
+*Figura 3: Levantamiento mediante SLAM en la EDAR de Pinedo, combinando NTRIP y puntos de apoyo encadenados.*
 
-El resultado final fue **simplemente excelente**. La nube de puntos no solo quedó perfectamente georreferenciada en el sistema global, sino que las comprobaciones métricas en gabinete mostraron tolerancias impecables, muy por debajo de los umbrales exigidos en edificación e ingeniería industrial.
+El resultado final fue **excelente**. La nube global no solo quedó correctamente orientada y georreferenciada en el sistema de referencia, sino que la continuidad entre pasadas presentó una consistencia métrica impecable, situándose holgadamente dentro de las tolerancias admisibles para ingeniería e infraestructura hidráulica.
 
 ## Reflexión final
 
-Esta experiencia en Pinedo demostró la conclusión definitiva de mi paso por estas prácticas: **el escáner SLAM no es una varita mágica ni un juguete inservible; es un instrumento de precisión hiperdependiente del factor humano**. 
+Esta experiencia en Pinedo demostró la conclusión definitiva de mi paso por estas prácticas: **el escáner SLAM no es una varita mágica ni un instrumento caprichoso; es un sensor condicionado al 100% por el factor humano y la estrategia del operador**. 
 
-Cuando se minusvalora la geodesia, se escatima en bases de apoyo o se trabaja con prisas a ciegas, la tecnología responde con datos inservibles. Pero cuando se respeta la física del sensor, se planifica la trayectoria con criterio geomático y existe una colaboración profesional basada en el respeto mutuo, el resultado roza la perfección.
+Cuando se minusvalora la geodesia, se escatima en control geométrico o se trabaja a ciegas, la tecnología responde con datos inservibles. Pero cuando se comprende la física del sensor, se planifica el encadenamiento de datos con criterio técnico y existe una colaboración profesional basada en el respeto mutuo, los resultados rozan la perfección.
