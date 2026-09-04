@@ -9,7 +9,6 @@ title: Inicio
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
- 
 
   /* Tipografía Gotham / Montserrat */
   h1, h2, h3, .post-card-title, .badge-topografia {
@@ -135,11 +134,18 @@ title: Inicio
   }
 </style>
 
-<!-- BANNER CON CURVAS DE NIVEL -->
+<!-- BANNER CON LOGOTIPO Y CURVAS DE NIVEL -->
 <div class="topo-hero">
-  <span class="badge-topografia">Geomática & Topografía</span>
-  <h1>Cuaderno de Campo</h1>
-  <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap-reverse;">
+    <div style="flex: 1; min-width: 250px;">
+      <span class="badge-topografia">Geomática & Topografía</span>
+      <h1>Cuaderno de Campo</h1>
+      <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
+    </div>
+    <div style="flex-shrink: 0; text-align: center;">
+      <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+    </div>
+  </div>
 </div>
 
 <h2>Publicaciones</h2>
