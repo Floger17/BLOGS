@@ -3,7 +3,7 @@ layout: default
 title: Inicio
 ---
 
-<!-- Carga de Montserrat (Réplica exacta de Gotham para web) -->
+<!-- Carga de Montserrat -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@ title: Inicio
     -ms-user-select: none !important;
     user-select: none !important;
     -webkit-user-drag: none !important;
+    -webkit-touch-callout: none !important; /* Desactiva el menú al mantener pulsado en móvil */
   }
 
   /* BLOQUEO EN IMPRESIÓN Y PDF */
@@ -39,40 +40,21 @@ title: Inicio
 
   .logo-img-protected {
     height: 110px;
-    width: auto; /* Mantiene la proporción original sin achatar */
+    width: auto; /* Proporción original intacta */
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     display: block;
     pointer-events: none;
   }
 
-  /* ESCUDO DE PROTECCIÓN Y MARCA DE AGUA SOBRE EL LOGO */
   .logo-shield {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.01); /* Transparente para interactividad */
+    background: transparent;
     z-index: 10;
-  }
-
-  /* MARCA DE AGUA ANTI-CAPTURA EN EL LOGO */
-  .logo-protected-container::after {
-    content: "© FRA • NO COPIAR";
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
-    font-size: 0.55rem;
-    font-weight: 800;
-    color: rgba(138, 73, 57, 0.6);
-    background: rgba(255, 255, 255, 0.85);
-    padding: 1px 4px;
-    border-radius: 3px;
-    pointer-events: none;
-    letter-spacing: 0.5px;
-    border: 1px solid rgba(138, 73, 57, 0.3);
-    z-index: 11;
   }
 
   /* BANNER PRINCIPAL */
@@ -191,7 +173,7 @@ title: Inicio
   }
 </style>
 
-<!-- BANNER CON LOGOTIPO Y CURVAS DE NIVEL -->
+<!-- BANNER CON LOGOTIPO -->
 <div class="topo-hero">
   <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap-reverse;">
     <div style="flex: 1; min-width: 250px;">
@@ -200,7 +182,6 @@ title: Inicio
       <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
     </div>
     <div style="text-align: center;">
-      <!-- ESTRUCTURA PROTEGIDA PARA TU LOGO CON PROPORCIONES ORIGINALES -->
       <div class="logo-protected-container">
         <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" class="logo-img-protected" draggable="false">
         <div class="logo-shield"></div>
@@ -211,7 +192,7 @@ title: Inicio
 
 <h2>Publicaciones</h2>
 
-<!-- REJILLA DE TARJETAS CON FOTO -->
+<!-- REJILLA DE TARJETAS -->
 <div class="posts-grid">
   {% for post in site.posts %}
     <a href="{{ post.url | relative_url }}" class="post-card">
@@ -244,7 +225,7 @@ title: Inicio
     e.preventDefault();
   }, false);
 
-  // Bloqueo de Atajos Teclado (Ctrl+S, F12, Ctrl+U, etc.)
+  // Bloqueo de Atajos Teclado
   document.addEventListener('keydown', function(e) {
     if (
       (e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U') ||
