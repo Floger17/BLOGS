@@ -28,9 +28,9 @@
     <div class="social-icons-grid">
 
       <a href="mailto:fabioregolf7@gmail.com" target="_blank" title="Correo" class="social-icon-link" style="height: 38px;">
-  <img src="{{ '/assets/img/Logocorreo.PNG' | relative_url }}" alt="Email" style="height: 25px !important; width: auto; vertical-align: middle; transform: translateY(2px);">
-</a>
-     
+        <img src="{{ '/assets/img/Logocorreo.PNG' | relative_url }}" alt="Email" style="height: 25px !important; width: auto; vertical-align: middle; transform: translateY(2px);">
+      </a>
+      
       <a href="https://www.linkedin.com/in/fabio-regolf-ari%C3%B1o-a58305328/" target="_blank" title="LinkedIn" class="social-icon-link">
         <img src="{{ '/assets/img/LinkedIn logo Negro.png' | relative_url }}" alt="LinkedIn" class="social-icon-img">
       </a>
@@ -117,3 +117,48 @@
     filter: brightness(1.2) !important;
   }
 </style>
+
+<!-- SCRIPT GLOBAL ANTI-IMPRESIÓN, ANTI-INSPECCIÓN Y ANTI-COPIA -->
+<script>
+  // 1. Desactivar clic derecho
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  }, false);
+
+  // 2. Desactivar arrastre de elementos e imágenes
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  }, false);
+
+  // 3. Bloquear atajos de teclado (Impresión, F12, Ver Código Fuente, Guardar)
+  document.addEventListener('keydown', function(e) {
+    if (
+      // Ctrl+P / Cmd+P (Imprimir)
+      ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 'P' || e.keyCode === 80)) ||
+      // F12 (Herramientas de Desarrollador)
+      e.key === 'F12' || e.keyCode === 123 ||
+      // Ctrl+U / Cmd+U (Ver código fuente)
+      ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U' || e.keyCode === 85)) ||
+      // Ctrl+Shift+I / J / C (Herramientas de Desarrollador)
+      ((e.ctrlKey || e.metaKey) && e.shiftKey && (
+        e.key === 'I' || e.key === 'i' || 
+        e.key === 'J' || e.key === 'j' || 
+        e.key === 'C' || e.key === 'c'
+      )) ||
+      // Ctrl+S / Cmd+S (Guardar página)
+      ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S' || e.keyCode === 83))
+    ) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      return false;
+    }
+  }, true);
+
+  // 4. Medida de respaldo para controlar la impresión desde el menú del navegador
+  window.onbeforeprint = function() {
+    document.body.style.display = 'none';
+  };
+  window.onafterprint = function() {
+    document.body.style.display = 'block';
+  };
+</script>
