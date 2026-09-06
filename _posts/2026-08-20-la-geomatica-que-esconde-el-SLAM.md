@@ -123,7 +123,7 @@ Para entender este despliegue de control y organización, nada como ver la herra
 <figure style="text-align: center; margin: 2rem 0;">
   <img src="{{ '/assets/img/QField.jpg' | relative_rl }}" alt="Interfaz de QField utilizada en campo para el control de ODTs y bases." style="max-width: 50%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
   <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; font-style: italic;">
-    Interfaz de QField utilizada en campo para el control de ODTs y bases.
+    Figura 1: Capa personalizada en QField para el seguimiento en tiempo real, registro de observaciones, insertar foto...
   </figcaption>
 </figure>
 
