@@ -9,16 +9,49 @@ title: Inicio
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
   /* Tipografía Gotham / Montserrat */
   h1, h2, h3, .post-card-title, .badge-topografia {
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
- /* BANNER PRINCIPAL */
+  /* PROTECCIÓN GLOBAL DE IMÁGENES Y TEXTO */
+  img, .logo-shield, .post-card-image-wrapper {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+  }
+
+  /* CONTENEDOR Y ESCUDO PROTECTOR PARA EL LOGO */
+  .logo-protected-container {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .logo-img-protected {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    display: block;
+    pointer-events: none; /* Inhabilita la interacción directa del ratón */
+  }
+
+  .logo-shield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
+  }
+
+  /* BANNER PRINCIPAL */
   .topo-hero {
     background-color: #ffffff;
-    /* Red de isolíneas orgánicas densas en color siena (#8a4939) */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='300' viewBox='0 0 900 300'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1.2' opacity='0.25'%3E%3Cpath d='M900,0 C820,30 780,90 900,140'/%3E%3Cpath d='M900,0 C760,50 710,120 900,180'/%3E%3Cpath d='M900,0 C700,70 640,150 900,220' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M900,0 C640,90 570,180 900,260'/%3E%3Cpath d='M900,0 C580,110 500,210 900,300'/%3E%3Cpath d='M900,0 C520,130 430,240 850,300'/%3E%3Cpath d='M900,0 C460,150 360,270 750,300' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M900,0 C400,170 290,290 650,300'/%3E%3Cpath d='M900,0 C340,190 220,300 550,300'/%3E%3Cpath d='M900,0 C280,210 150,300 450,300'/%3E%3Cpath d='M900,0 C220,230 80,300 350,300' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M900,0 C160,250 10,300 250,300'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: top right;
@@ -37,7 +70,6 @@ title: Inicio
     margin: 0 0 0.4rem 0;
   }
 
-  /* Badge adaptado a la estética topográfica siena */
   .badge-topografia {
     display: inline-block;
     background: #fdf6f0;
@@ -102,6 +134,7 @@ title: Inicio
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    pointer-events: none; /* Desactiva interacción sobre imágenes de tarjetas */
   }
 
   .post-card:hover .post-card-image {
@@ -142,8 +175,12 @@ title: Inicio
       <h1>Cuaderno de Campo</h1>
       <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
     </div>
-    <div style="flex-shrink: 0; text-align: center;">
-      <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+    <div style="text-align: center;">
+      <!-- ESTRUCTURA BLINDADA PARA TU LOGO -->
+      <div class="logo-protected-container">
+        <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" class="logo-img-protected" draggable="false">
+        <div class="logo-shield"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -156,9 +193,9 @@ title: Inicio
     <a href="{{ post.url | relative_url }}" class="post-card">
       <div class="post-card-image-wrapper">
         {% if post.image %}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card-image">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card-image" draggable="false">
         {% else %}
-          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Topografía" class="post-card-image">
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Topografía" class="post-card-image" draggable="false">
         {% endif %}
       </div>
       <div class="post-card-body">
@@ -170,3 +207,27 @@ title: Inicio
     </a>
   {% endfor %}
 </div>
+
+<!-- SCRIPT DE DISUASIÓN Y PROTECCIÓN JS -->
+<script>
+  // Bloquear clic derecho en toda la página
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  }, false);
+
+  // Impedir inicio de arrastre de elementos
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  }, false);
+
+  // Bloquear atajos para Guardar (Ctrl+S), Ver Fuente (Ctrl+U) e Inspeccionar (F12)
+  document.addEventListener('keydown', function(e) {
+    if (
+      (e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U') ||
+      e.key === 'F12' ||
+      ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c'))
+    ) {
+      e.preventDefault();
+    }
+  }, false);
+</script>
