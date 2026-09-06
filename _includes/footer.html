@@ -162,17 +162,16 @@
     document.body.style.display = 'block';
   };
 
-// 5. DETECCIÓN LIMPIA DE DEVTOOLS (SIN DEBUGGER)
+  // 5. DETECCIÓN MULTICAPA DE HERRAMIENTAS DE DESARROLLADOR (DEVTOOLS)
   (function() {
     function cleanDOM() {
-      // Borra absolutamente todo el contenido visual y del HEAD
       if (document.body) document.body.innerHTML = '';
       if (document.head) document.head.innerHTML = '';
       console.clear();
     }
 
-    // Comprobación de dimensiones (Cuando DevTools se acopla a un lado o abajo)
-    function checkDevTools() {
+    // A. Método de detección por diferencial de resolución (Ventana lateral o inferior)
+    function checkByResize() {
       const widthThreshold = window.outerWidth - window.innerWidth > 160;
       const heightThreshold = window.outerHeight - window.innerHeight > 160;
       
@@ -181,13 +180,26 @@
       }
     }
 
-    // Escucha cambios de tamaño de ventana (al abrir el panel de los 3 puntos)
-    window.addEventListener('resize', checkDevTools);
+    // B. Método de detección por tiempo de ejecución de la consola
+    function checkByTiming() {
+      const startTime = performance.now();
+      // Evalúa la pausa de ejecución del motor cuando la consola / devtools están abiertas
+      (function() {}.constructor("debugger")());
+      const endTime = performance.now();
+
+      if (endTime - startTime > 100) {
+        cleanDOM();
+      }
+    }
+
+    // Asignación de oyentes
+    window.addEventListener('resize', checkByResize);
     
-    // Verificación continua de consola limpia
+    // Ejecución periódica para cubrir reaperturas o inspecciones activas
     setInterval(function() {
-      checkDevTools();
+      checkByResize();
+      checkByTiming();
       console.clear();
-    }, 300);
+    }, 200);
   })();
 </script>
