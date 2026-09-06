@@ -14,24 +14,24 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* PROTECCIÓN GLOBAL DE IMÁGENES Y TEXTO */
-  img, .logo-shield, .post-card-image-wrapper {
+  /* PROTECCIÓN DE ELEMENTOS */
+  img, .logo-shield {
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
     -webkit-user-drag: none !important;
-    -webkit-touch-callout: none !important; /* Desactiva el menú al mantener pulsado en móvil */
+    -webkit-touch-callout: none !important;
   }
 
-  /* BLOQUEO EN IMPRESIÓN Y PDF */
+  /* OCULTAR EN IMPRESIÓN (CTRL + P) */
   @media print {
-    html, body {
+    .logo-img-protected {
       display: none !important;
     }
   }
 
-  /* CONTENEDOR Y ESCUDO PROTECTOR PARA EL LOGO */
+  /* CONTENEDOR Y PROPORCIÓN PERFECTA DEL LOGO */
   .logo-protected-container {
     position: relative;
     display: inline-block;
@@ -40,11 +40,18 @@ title: Inicio
 
   .logo-img-protected {
     height: 110px;
-    width: auto; /* Proporción original intacta */
+    width: auto; /* Mantiene la proporción original intacta */
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     display: block;
     pointer-events: none;
+    transition: opacity 0.01s ease-in-out; /* Desaparición ultrarrápida */
+  }
+
+  /* CLASE QUE HACE DESAPARECER EL LOGO */
+  .logo-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 
   .logo-shield {
@@ -97,7 +104,7 @@ title: Inicio
     margin: 0;
   }
 
-  /* REJILLA DE TARJETAS (GRID) */
+  /* REJILLA DE TARJETAS */
   .posts-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -183,7 +190,7 @@ title: Inicio
     </div>
     <div style="text-align: center;">
       <div class="logo-protected-container">
-        <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" class="logo-img-protected" draggable="false">
+        <img id="protectedLogo" src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" class="logo-img-protected" draggable="false">
         <div class="logo-shield"></div>
       </div>
     </div>
@@ -213,26 +220,39 @@ title: Inicio
   {% endfor %}
 </div>
 
-<!-- SCRIPT DE SEGURIDAD GENERAL -->
+<!-- SCRIPT DE INTERCEPCIÓN DE CAPTURA DE PANTALLA -->
 <script>
-  // Bloqueo de Clic Derecho
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
+  const logo = document.getElementById('protectedLogo');
+
+  function hideLogoTemporarily() {
+    if (logo) {
+      logo.classList.add('logo-hidden');
+      setTimeout(function() {
+        logo.classList.remove('logo-hidden');
+      }, 2000);
+    }
+  }
+
+  // Intercepta la tecla Impr Pant (PrintScreen) al presionar
+  window.addEventListener('keyup', function(e) {
+    if (e.key === 'PrintScreen' || e.keyCode === 44) {
+      hideLogoTemporarily();
+    }
   }, false);
 
-  // Impedir inicio de arrastre de elementos
-  document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-  }, false);
-
-  // Bloqueo de Atajos Teclado
+  // Al presionar combinaciones como Ctrl+S, F12, etc., oculta también la imagen
   document.addEventListener('keydown', function(e) {
     if (
-      (e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U') ||
+      (e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'p' || e.key === 'S' || e.key === 'U' || e.key === 'P') ||
       e.key === 'F12' ||
       ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c'))
     ) {
-      e.preventDefault();
+      hideLogoTemporarily();
+      if (e.key !== 'p' && e.key !== 'P') e.preventDefault();
     }
   }, false);
+
+  // Bloqueo de Clic Derecho y Arrastre
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); }, false);
+  document.addEventListener('dragstart', function(e) { e.preventDefault(); }, false);
 </script>
