@@ -26,11 +26,11 @@ title: Inicio
   /* BLOQUEO EN IMPRESIÓN Y GUARDADO A PDF */
   @media print {
     html, body {
-      display: none !important; /* La página sale completamente en blanco */
+      display: none !important;
     }
   }
 
-  /* ESTADO DE PROTECCIÓN ANTI-CAPTURA (Oculta imágenes si detecta captura/recorte) */
+  /* ESTADO DE PROTECCIÓN ANTI-CAPTURA */
   .pantalla-oculta .logo-img-protected,
   .pantalla-oculta .post-card-image {
     opacity: 0 !important;
@@ -51,7 +51,7 @@ title: Inicio
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     display: block;
-    pointer-events: none; /* Inhabilita la interacción directa del ratón */
+    pointer-events: none;
   }
 
   .logo-shield {
@@ -118,7 +118,7 @@ title: Inicio
     }
   }
 
-  /* DISEÑO DE CADA TARJETA */
+  /* DISEÑO DE CADA TARJETA CON MARCA DE AGUA SUPERPUESTA */
   .post-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -144,12 +144,28 @@ title: Inicio
     position: relative;
   }
 
+  /* ESCUDO DE MARCA DE AGUA SOBRE LA IMAGEN */
+  .post-card-image-wrapper::after {
+    content: "© FRA • PROTEGIDO";
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(15, 23, 42, 0.4);
+    padding: 2px 6px;
+    border-radius: 4px;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+
   .post-card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    pointer-events: none; /* Desactiva interacción sobre imágenes de tarjetas */
+    pointer-events: none;
   }
 
   .post-card:hover .post-card-image {
@@ -191,7 +207,7 @@ title: Inicio
       <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
     </div>
     <div style="text-align: center;">
-      <!-- ESTRUCTURA BLINDADA PARA TU LOGO -->
+      <!-- ESTRUCTURA BLINDADA PARA TU LOGO CON MARCA DE AGUA -->
       <div class="logo-protected-container">
         <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" class="logo-img-protected" draggable="false">
         <div class="logo-shield"></div>
@@ -261,7 +277,7 @@ title: Inicio
     }
   }, false);
 
-  // 4. Ocultar imágenes al perder el foco (activación de herramientas de recortes externas)
+  // 4. Ocultar imágenes al perder el foco (activación de herramientas externas)
   window.addEventListener('blur', function() {
     document.body.classList.add('pantalla-oculta');
   });
