@@ -91,3 +91,8 @@ body {
   overflow: hidden;
   user-select: none;
 }
+
+/* Si JavaScript está desactivado en el navegador, oculta todo el contenido */
+html.no-js body {
+  display: none !important;
+}
