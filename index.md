@@ -23,6 +23,21 @@ title: Inicio
     -webkit-user-drag: none !important;
   }
 
+  /* BLOQUEO EN IMPRESIÓN Y GUARDADO A PDF */
+  @media print {
+    html, body {
+      display: none !important; /* La página sale completamente en blanco */
+    }
+  }
+
+  /* ESTADO DE PROTECCIÓN ANTI-CAPTURA (Oculta imágenes si detecta captura/recorte) */
+  .pantalla-oculta .logo-img-protected,
+  .pantalla-oculta .post-card-image {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.1s ease;
+  }
+
   /* CONTENEDOR Y ESCUDO PROTECTOR PARA EL LOGO */
   .logo-protected-container {
     position: relative;
@@ -208,19 +223,19 @@ title: Inicio
   {% endfor %}
 </div>
 
-<!-- SCRIPT DE DISUASIÓN Y PROTECCIÓN JS -->
+<!-- SCRIPT DE DISUASIÓN Y PROTECCIÓN JS ANTI-CAPTURA -->
 <script>
-  // Bloquear clic derecho en toda la página
+  // 1. Bloquear clic derecho
   document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
   }, false);
 
-  // Impedir inicio de arrastre de elementos
+  // 2. Impedir inicio de arrastre
   document.addEventListener('dragstart', function(e) {
     e.preventDefault();
   }, false);
 
-  // Bloquear atajos para Guardar (Ctrl+S), Ver Fuente (Ctrl+U) e Inspeccionar (F12)
+  // 3. Bloquear atajos e interceptar teclas de captura
   document.addEventListener('keydown', function(e) {
     if (
       (e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U') ||
@@ -229,5 +244,30 @@ title: Inicio
     ) {
       e.preventDefault();
     }
+
+    // Detección de pulsación de PrintScreen o combinaciones de captura en Mac
+    if (
+      e.key === 'PrintScreen' || 
+      e.keyCode === 44 ||
+      (e.metaKey && e.shiftKey && (e.key === '4' || e.key === '3' || e.key === '5'))
+    ) {
+      document.body.classList.add('pantalla-oculta');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText('');
+      }
+      setTimeout(function() {
+        document.body.classList.remove('pantalla-oculta');
+      }, 2000);
+    }
   }, false);
+
+  // 4. Ocultar imágenes al perder el foco (activación de herramientas de recortes externas)
+  window.addEventListener('blur', function() {
+    document.body.classList.add('pantalla-oculta');
+  });
+
+  // 5. Restaurar imágenes al recuperar el foco
+  window.addEventListener('focus', function() {
+    document.body.classList.remove('pantalla-oculta');
+  });
 </script>
