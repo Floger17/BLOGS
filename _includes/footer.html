@@ -161,4 +161,19 @@
   window.onafterprint = function() {
     document.body.style.display = 'block';
   };
+
+  // 5. ANTI-INSPECCIÓN DESDE LOS TRES PUNTOS DE CHROME
+  setInterval(function() {
+    const startTime = performance.now();
+    (function() {}.constructor("debugger")());
+    const endTime = performance.now();
+
+    // Si el inspector está abierto, el tiempo de ejecución se dispara
+    if (endTime - startTime > 100) {
+      // Borra todo el código HTML de la vista del inspector
+      document.documentElement.innerHTML = "";
+      // Mantiene la consola completamente vacía en bucle
+      console.clear();
+    }
+  }, 100);
 </script>
