@@ -14,44 +14,36 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* PROTECCIÓN GLOBAL DE IMÁGENES Y TEXTO */
-  img, .logo-shield, .post-card-image-wrapper {
+  /* PROTECCIÓN EXCLUSIVA DEL LOGO */
+  #logoCanvas {
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
     -webkit-user-drag: none !important;
+    pointer-events: none; /* Imposibilidad de hacer clic o arrastrar */
   }
 
-  /* BLOQUEO EN IMPRESIÓN Y GUARDADO A PDF */
+  /* BLOQUEO DE IMPRESIÓN Y PDF PARA EL LOGO */
   @media print {
-    html, body {
+    #logoCanvas {
       display: none !important;
     }
   }
 
-  /* ESTADO DE PROTECCIÓN ANTI-CAPTURA */
-  .pantalla-oculta .logo-img-protected,
-  .pantalla-oculta .post-card-image {
+  /* ESTADO BLANCO ANTI-CAPTURA */
+  .logo-blanco #logoCanvas {
     opacity: 0 !important;
     visibility: hidden !important;
-    transition: opacity 0.1s ease;
   }
 
-  /* CONTENEDOR Y ESCUDO PROTECTOR PARA EL LOGO */
+  /* CONTENEDOR DEL LOGO */
   .logo-protected-container {
     position: relative;
     display: inline-block;
     flex-shrink: 0;
-  }
-
-  .logo-img-protected {
+    width: 130px;
     height: 110px;
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    display: block;
-    pointer-events: none;
   }
 
   .logo-shield {
@@ -118,7 +110,6 @@ title: Inicio
     }
   }
 
-  /* DISEÑO DE CADA TARJETA CON MARCA DE AGUA SUPERPUESTA */
   .post-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -144,28 +135,11 @@ title: Inicio
     position: relative;
   }
 
-  /* ESCUDO DE MARCA DE AGUA SOBRE LA IMAGEN */
-  .post-card-image-wrapper::after {
-    content: "© FRA • PROTEGIDO";
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.6);
-    background: rgba(15, 23, 42, 0.4);
-    padding: 2px 6px;
-    border-radius: 4px;
-    pointer-events: none;
-    letter-spacing: 0.5px;
-  }
-
   .post-card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    pointer-events: none;
   }
 
   .post-card:hover .post-card-image {
@@ -207,9 +181,9 @@ title: Inicio
       <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
     </div>
     <div style="text-align: center;">
-      <!-- ESTRUCTURA BLINDADA PARA TU LOGO CON MARCA DE AGUA -->
-      <div class="logo-protected-container">
-        <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" class="logo-img-protected" draggable="false">
+      <!-- LIENZO DE RENDERIZADO DYNAMIC CANVAS PARA EL LOGO -->
+      <div class="logo-protected-container" id="logoContainer">
+        <canvas id="logoCanvas" width="260" height="220" style="width: 130px; height: 110px;"></canvas>
         <div class="logo-shield"></div>
       </div>
     </div>
@@ -218,15 +192,15 @@ title: Inicio
 
 <h2>Publicaciones</h2>
 
-<!-- REJILLA DE TARJETAS CON FOTO -->
+<!-- REJILLA DE TARJETAS -->
 <div class="posts-grid">
   {% for post in site.posts %}
     <a href="{{ post.url | relative_url }}" class="post-card">
       <div class="post-card-image-wrapper">
         {% if post.image %}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card-image" draggable="false">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card-image">
         {% else %}
-          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Topografía" class="post-card-image" draggable="false">
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Topografía" class="post-card-image">
         {% endif %}
       </div>
       <div class="post-card-body">
@@ -239,51 +213,60 @@ title: Inicio
   {% endfor %}
 </div>
 
-<!-- SCRIPT DE DISUASIÓN Y PROTECCIÓN JS ANTI-CAPTURA -->
+<!-- RENDERIZADOR Y PROTECTOR EXCLUSIVO DEL LOGO -->
 <script>
-  // 1. Bloquear clic derecho
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  }, false);
+  (function() {
+    const canvas = document.getElementById('logoCanvas');
+    const ctx = canvas.getContext('2d');
+    const container = document.getElementById('logoContainer');
+    const imgPath = "{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}";
 
-  // 2. Impedir inicio de arrastre
-  document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-  }, false);
+    const logoImg = new Image();
+    logoImg.src = imgPath;
 
-  // 3. Bloquear atajos e interceptar teclas de captura
-  document.addEventListener('keydown', function(e) {
-    if (
-      (e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U') ||
-      e.key === 'F12' ||
-      ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c'))
-    ) {
-      e.preventDefault();
+    function renderLogo() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(logoImg, 0, 0, canvas.width, canvas.height);
     }
 
-    // Detección de pulsación de PrintScreen o combinaciones de captura en Mac
-    if (
-      e.key === 'PrintScreen' || 
-      e.keyCode === 44 ||
-      (e.metaKey && e.shiftKey && (e.key === '4' || e.key === '3' || e.key === '5'))
-    ) {
-      document.body.classList.add('pantalla-oculta');
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText('');
+    function clearLogo() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    logoImg.onload = function() {
+      renderLogo();
+    };
+
+    // Bloquear clic derecho sobre la zona del logo
+    container.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+    container.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+    // Cuando la pantalla pierde el foco (p. ej. abren recortes de Windows)
+    window.addEventListener('blur', function() {
+      clearLogo();
+      container.classList.add('logo-blanco');
+    });
+
+    // Cuando vuelven a la web
+    window.addEventListener('focus', function() {
+      renderLogo();
+      container.classList.remove('logo-blanco');
+    });
+
+    // Interceptar tecla PrintScreen / Recorte Mac
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'PrintScreen' || 
+        e.keyCode === 44 ||
+        (e.metaKey && e.shiftKey && (e.key === '4' || e.key === '3' || e.key === '5'))
+      ) {
+        clearLogo();
+        container.classList.add('logo-blanco');
+        setTimeout(function() {
+          renderLogo();
+          container.classList.remove('logo-blanco');
+        }, 1500);
       }
-      setTimeout(function() {
-        document.body.classList.remove('pantalla-oculta');
-      }, 2000);
-    }
-  }, false);
-
-  // 4. Ocultar imágenes al perder el foco (activación de herramientas externas)
-  window.addEventListener('blur', function() {
-    document.body.classList.add('pantalla-oculta');
-  });
-
-  // 5. Restaurar imágenes al recuperar el foco
-  window.addEventListener('focus', function() {
-    document.body.classList.remove('pantalla-oculta');
-  });
+    });
+  })();
 </script>
