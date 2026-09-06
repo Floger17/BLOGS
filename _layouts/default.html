@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "es" }}">
 
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- El contenido real no aparecerá plano en la pestaña Sources -->
+        <div id="site-global-content"></div>
+
+        <script>
+          (function() {
+            // Jekyll codifica en Base64 todo el contenido renderizado
+            const rawContent = `{{ content | strip_newlines | base64_encode }}`;
+            
+            // Se inyecta en memoria solo para ser visible en pantalla
+            document.getElementById('site-global-content').innerHTML = atob(rawContent);
+          })();
+        </script>
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
