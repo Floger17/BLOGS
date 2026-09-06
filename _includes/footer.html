@@ -162,18 +162,32 @@
     document.body.style.display = 'block';
   };
 
-  // 5. ANTI-INSPECCIÓN DESDE LOS TRES PUNTOS DE CHROME
-  setInterval(function() {
-    const startTime = performance.now();
-    (function() {}.constructor("debugger")());
-    const endTime = performance.now();
-
-    // Si el inspector está abierto, el tiempo de ejecución se dispara
-    if (endTime - startTime > 100) {
-      // Borra todo el código HTML de la vista del inspector
-      document.documentElement.innerHTML = "";
-      // Mantiene la consola completamente vacía en bucle
+// 5. DETECCIÓN LIMPIA DE DEVTOOLS (SIN DEBUGGER)
+  (function() {
+    function cleanDOM() {
+      // Borra absolutamente todo el contenido visual y del HEAD
+      if (document.body) document.body.innerHTML = '';
+      if (document.head) document.head.innerHTML = '';
       console.clear();
     }
-  }, 100);
+
+    // Comprobación de dimensiones (Cuando DevTools se acopla a un lado o abajo)
+    function checkDevTools() {
+      const widthThreshold = window.outerWidth - window.innerWidth > 160;
+      const heightThreshold = window.outerHeight - window.innerHeight > 160;
+      
+      if (widthThreshold || heightThreshold) {
+        cleanDOM();
+      }
+    }
+
+    // Escucha cambios de tamaño de ventana (al abrir el panel de los 3 puntos)
+    window.addEventListener('resize', checkDevTools);
+    
+    // Verificación continua de consola limpia
+    setInterval(function() {
+      checkDevTools();
+      console.clear();
+    }, 300);
+  })();
 </script>
