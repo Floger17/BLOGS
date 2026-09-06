@@ -14,46 +14,65 @@ title: Inicio
     font-family: 'Montserrat', 'Gotham', -apple-system, sans-serif !important;
   }
 
-  /* PROTECCIÓN EXCLUSIVA DEL LOGO */
-  #logoCanvas {
+  /* PROTECCIÓN GLOBAL DE IMÁGENES Y TEXTO */
+  img, .logo-shield, .post-card-image-wrapper {
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
     -webkit-user-drag: none !important;
-    pointer-events: none; /* Imposibilidad de hacer clic o arrastrar */
   }
 
-  /* BLOQUEO DE IMPRESIÓN Y PDF PARA EL LOGO */
+  /* BLOQUEO EN IMPRESIÓN Y PDF */
   @media print {
-    #logoCanvas {
+    html, body {
       display: none !important;
     }
   }
 
-  /* ESTADO BLANCO ANTI-CAPTURA */
-  .logo-blanco #logoCanvas {
-    opacity: 0 !important;
-    visibility: hidden !important;
-  }
-
-  /* CONTENEDOR DEL LOGO */
+  /* CONTENEDOR Y ESCUDO PROTECTOR PARA EL LOGO */
   .logo-protected-container {
     position: relative;
     display: inline-block;
     flex-shrink: 0;
-    width: 130px;
-    height: 110px;
   }
 
+  .logo-img-protected {
+    height: 110px;
+    width: auto; /* Mantiene la proporción original sin achatar */
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    display: block;
+    pointer-events: none;
+  }
+
+  /* ESCUDO DE PROTECCIÓN Y MARCA DE AGUA SOBRE EL LOGO */
   .logo-shield {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.01); /* Transparente para interactividad */
     z-index: 10;
+  }
+
+  /* MARCA DE AGUA ANTI-CAPTURA EN EL LOGO */
+  .logo-protected-container::after {
+    content: "© FRA • NO COPIAR";
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 0.55rem;
+    font-weight: 800;
+    color: rgba(138, 73, 57, 0.6);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1px 4px;
+    border-radius: 3px;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(138, 73, 57, 0.3);
+    z-index: 11;
   }
 
   /* BANNER PRINCIPAL */
@@ -181,9 +200,9 @@ title: Inicio
       <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
     </div>
     <div style="text-align: center;">
-      <!-- LIENZO DE RENDERIZADO DYNAMIC CANVAS PARA EL LOGO -->
-      <div class="logo-protected-container" id="logoContainer">
-        <canvas id="logoCanvas" width="260" height="220" style="width: 130px; height: 110px;"></canvas>
+      <!-- ESTRUCTURA PROTEGIDA PARA TU LOGO CON PROPORCIONES ORIGINALES -->
+      <div class="logo-protected-container">
+        <img src="{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}" alt="Logo FRA" class="logo-img-protected" draggable="false">
         <div class="logo-shield"></div>
       </div>
     </div>
@@ -192,7 +211,7 @@ title: Inicio
 
 <h2>Publicaciones</h2>
 
-<!-- REJILLA DE TARJETAS -->
+<!-- REJILLA DE TARJETAS CON FOTO -->
 <div class="posts-grid">
   {% for post in site.posts %}
     <a href="{{ post.url | relative_url }}" class="post-card">
@@ -213,60 +232,26 @@ title: Inicio
   {% endfor %}
 </div>
 
-<!-- RENDERIZADOR Y PROTECTOR EXCLUSIVO DEL LOGO -->
+<!-- SCRIPT DE SEGURIDAD GENERAL -->
 <script>
-  (function() {
-    const canvas = document.getElementById('logoCanvas');
-    const ctx = canvas.getContext('2d');
-    const container = document.getElementById('logoContainer');
-    const imgPath = "{{ '/assets/img/MARCA_PERSONAL_BYN.png' | relative_url }}";
+  // Bloqueo de Clic Derecho
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  }, false);
 
-    const logoImg = new Image();
-    logoImg.src = imgPath;
+  // Impedir inicio de arrastre de elementos
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  }, false);
 
-    function renderLogo() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(logoImg, 0, 0, canvas.width, canvas.height);
+  // Bloqueo de Atajos Teclado (Ctrl+S, F12, Ctrl+U, etc.)
+  document.addEventListener('keydown', function(e) {
+    if (
+      (e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U') ||
+      e.key === 'F12' ||
+      ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c'))
+    ) {
+      e.preventDefault();
     }
-
-    function clearLogo() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-
-    logoImg.onload = function() {
-      renderLogo();
-    };
-
-    // Bloquear clic derecho sobre la zona del logo
-    container.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-    container.addEventListener('dragstart', function(e) { e.preventDefault(); });
-
-    // Cuando la pantalla pierde el foco (p. ej. abren recortes de Windows)
-    window.addEventListener('blur', function() {
-      clearLogo();
-      container.classList.add('logo-blanco');
-    });
-
-    // Cuando vuelven a la web
-    window.addEventListener('focus', function() {
-      renderLogo();
-      container.classList.remove('logo-blanco');
-    });
-
-    // Interceptar tecla PrintScreen / Recorte Mac
-    document.addEventListener('keydown', function(e) {
-      if (
-        e.key === 'PrintScreen' || 
-        e.keyCode === 44 ||
-        (e.metaKey && e.shiftKey && (e.key === '4' || e.key === '3' || e.key === '5'))
-      ) {
-        clearLogo();
-        container.classList.add('logo-blanco');
-        setTimeout(function() {
-          renderLogo();
-          container.classList.remove('logo-blanco');
-        }, 1500);
-      }
-    });
-  })();
+  }, false);
 </script>
