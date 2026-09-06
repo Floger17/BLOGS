@@ -73,3 +73,21 @@ body {
 .site-header, .site-footer, .page-content, .wrapper {
   background-color: transparent !important;
 }
+
+/* Añadir a assets/main.scss */
+.post-content, article {
+  position: relative;
+}
+
+.post-content::after {
+  content: "© FABIO REGOLF - PROHIBIDA LA REPRODUCCIÓN - FLOGER17.GITHUB.IO ";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  opacity: 0.06; /* Muy tenue para el ojo, pero visible para escáneres */
+  font-size: 14px;
+  line-height: 30px;
+  word-spacing: 20px;
+  overflow: hidden;
+  user-select: none;
+}
