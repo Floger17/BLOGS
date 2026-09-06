@@ -120,8 +120,8 @@ Dado que se exigía precisión georreferenciada, la dependencia de las bases del
 
 Para entender este despliegue de control y organización, nada como ver la herramienta en su entorno real. Durante las jornadas en las ODTs, la combinación entre la colectora móvil y la planificación espacial fue la clave para no perder el rumbo entre decenas de infraestructuras:
 
-![Interfaz de QField utilizada en campo para el control de ODTs y bases](/assets/img/TU_FOTO_QFIELD.jpg)
-*Figura 1: Capa personalizada en QField para el seguimiento en tiempo real, registro de observaciones y control de estado por municipios.*
+![Interfaz de QField utilizada en campo para el control de ODTs y bases](/assets/img/QField.jpg)
+*Figura 1: Capa personalizada en QField para el seguimiento en tiempo real, registro de observaciones, insertar foto...*
 
 ![Captura del escáner SLAM CHCNAV RS7 durante el levantamiento de una ODT](/assets/img/TU_FOTO_ODT.jpg)
 *Figura 2: Posicionamiento y flujo de pasada del CHCNAV RS7 en el entorno de una obra de drenaje transversal.*
