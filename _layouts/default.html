@@ -9,10 +9,10 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- Contenedor donde se insertará el contenido desencriptado -->
+        <!-- Contenedor donde se dibuja el contenido -->
         <div id="site-global-content"></div>
 
-        <!-- Guardamos el contenido en un bloque seguro sin romper la sintaxis de JS -->
+        <!-- Almacenamiento seguro del contenido codificado -->
         <script type="text/template" id="raw-b64-data">
           {{ content | base64_encode }}
         </script>
@@ -20,16 +20,19 @@
         <script>
           (function() {
             try {
-              // Extraemos la cadena codificada y eliminamos espacios en blanco/saltos de línea
               var b64String = document.getElementById('raw-b64-data').textContent.trim();
               
-              // Decodificamos el contenido usando la codificación UTF-8 adecuada
-              var decodedHTML = decodeURIComponent(escape(atob(b64String)));
+              // Decodificación segura para UTF-8 y caracteres en español
+              var binaryString = atob(b64String);
+              var bytes = new Uint8Array(binaryString.length);
+              for (var i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+              }
+              var decodedHTML = new TextDecoder('utf-8').decode(bytes);
               
-              // Inyectamos el HTML directamente en la pantalla
               document.getElementById('site-global-content').innerHTML = decodedHTML;
             } catch (e) {
-              console.error("Error al renderizar el contenido protegido.");
+              console.error("Error al renderizar el contenido:", e);
             }
           })();
         </script>
