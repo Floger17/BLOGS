@@ -1,56 +1,65 @@
----
+--
 ---
 @import "minima";
-
+ 
 /* ==========================================
    PROTECCIÓN GLOBAL ANTI-COPIA E IMPRESIÓN
    ========================================== */
-
-/* 1. Bloqueo de selección de texto en toda la web */
-html, body, p, h1, h2, h3, h4, h5, h6, span, a, li, article, .post-content {
+ 
+/* 1. Bloqueo de selección de texto en toda la web (heredado por defecto) */
+* {
   -webkit-user-select: none !important;
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important;
 }
-
-/* 2. Protección de imágenes contra arrastre en móviles y PC */
+ 
+/* 2. Protección de imágenes contra arrastre, guardado y menú contextual táctil */
 img {
   -webkit-user-drag: none !important;
-  -webkit-touch-callout: none !important; /* Desactiva el menú al mantener pulsado en móvil */
-  pointer-events: none;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  -webkit-touch-callout: none !important;
+  pointer-events: none !important;
 }
-
-/* 3. BLOQUEO TOTAL DE IMPRESIÓN Y GUARDADO A PDF (CTRL + P) */
+ 
+/* 3. Bloqueo total de impresión / guardado a PDF (Ctrl+P) */
 @media print {
-  html, body, .site-header, .page-content, .site-footer, .wrapper {
+  html, body, * {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
-    background: #ffffff !important;
+  }
+  body::before {
+    content: "Contenido no disponible para impresión.";
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
-
+ 
+/* 4. Si JavaScript está desactivado, oculta todo el contenido */
+html.no-js body {
+  display: none !important;
+}
+ 
 /* ==========================================
    ESTILOS EXISTENTES
    ========================================== */
-
+ 
 /* Ocultar el texto de suscripción RSS */
 .feed-subscribe,
 p.feed-subscribe,
 a[href*="feed.xml"] {
   display: none !important;
 }
-
+ 
 /* Adaptación de la tabla a móvil vertical */
 @media screen and (max-width: 600px) {
   table.responsive-footer-table,
   table.responsive-footer-table tbody,
-  table.responsive-footer-table tr {
-    display: block !important;
-    width: 100% !important;
-  }
-
+  table.responsive-footer-table tr,
   table.responsive-footer-table td.col-left,
   table.responsive-footer-table td.col-right {
     display: block !important;
@@ -58,7 +67,7 @@ a[href*="feed.xml"] {
     padding: 0 !important;
   }
 }
-
+ 
 /* FONDO TOPOGRÁFICO UNIFICADO (PC Y MÓVIL) */
 body {
   background-color: #ffffff !important;
@@ -68,31 +77,26 @@ body {
   background-size: 850px auto !important;
   background-attachment: fixed !important;
 }
-
+ 
 /* Transparencia para que la estructura de Minima deje ver las isolíneas en PC */
 .site-header, .site-footer, .page-content, .wrapper {
   background-color: transparent !important;
 }
-
-/* Añadir a assets/main.scss */
+ 
+/* Marca de agua invisible antiscraping */
 .post-content, article {
   position: relative;
 }
-
+ 
 .post-content::after {
   content: "© FABIO REGOLF - PROHIBIDA LA REPRODUCCIÓN - FLOGER17.GITHUB.IO ";
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none;
-  opacity: 0.06; /* Muy tenue para el ojo, pero visible para escáneres */
+  opacity: 0.06;
   font-size: 14px;
   line-height: 30px;
   word-spacing: 20px;
   overflow: hidden;
   user-select: none;
-}
-
-/* Si JavaScript está desactivado en el navegador, oculta todo el contenido */
-html.no-js body {
-  display: none !important;
 }
