@@ -114,7 +114,7 @@ Supongamos un esquema clásico con 4 bases (A, B, C y D). Por una cuestión pura
 
 *¿Qué hacer si las bases estaban en la plataforma del puente y el cauce era de difícil acceso?*
 
-Dado que se exigía precisión georreferenciada, la dependencia de las bases del topógrafo era total. Si la ladera presentaba una pendiente considerable, vegetación impenetrable o un riesgo alto de resbalón por la propia geomorfología del terreno, la decisión geomática fue categórica: **no intentar el descenso**. Forzar ese paso habría introducido una deriva inercial crítica en la cota ($Z$), imposibilitando un correcto ajuste geodésico y comprometiendo tanto la integridad física como los estándares exigidos para el proyecto.
+Dado que se exigía precisión georreferenciada, la dependencia de las bases del topógrafo era total. Si la ladera presentaba una pendiente considerable, vegetación impenetrable o un riesgo alto de resbalón por la propia geomorfología del terreno, la decisión geomática fue categórica: **no intentar el descenso**. Forzar ese paso habría introducido una deriva inercial crítica en la cota (*Z*), imposibilitando un correcto ajuste geodésico y comprometiendo tanto la integridad física como los estándares exigidos para el proyecto.
 
 ### Visualizando el flujo: Del campo a la colectora
 
