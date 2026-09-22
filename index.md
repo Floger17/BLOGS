@@ -186,7 +186,7 @@ title: Inicio
     <div style="flex: 1; min-width: 250px;">
       <span class="badge-topografia">Geomática & Topografía</span>
       <h1>Cuaderno de Campo</h1>
-      <p>Divulgación técnica, prácticas y reflexiones de un estudiante precolegiado.</p>
+      <p>Divulgación técnica, prácticas y reflexiones de un estudiante de ingeniería.</p>
     </div>
     <div style="text-align: center;">
       <div class="logo-protected-container">
