@@ -40,3 +40,46 @@ body {
 .site-header, .site-footer, .page-content, .wrapper {
   background-color: transparent !important;
 }
+
+/* ==========================================
+   PROTECCIÓN GLOBAL ANTI-COPIA E IMPRESIÓN
+   ========================================== */
+ 
+/* 1. Bloqueo de selección de texto en toda la web (heredado por defecto) */
+* {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+ 
+/* 2. Protección de imágenes contra arrastre, guardado y menú contextual táctil */
+img {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  -webkit-touch-callout: none !important;
+  pointer-events: none !important;
+}
+ 
+/* 3. Bloqueo total de impresión / guardado a PDF (Ctrl+P) */
+@media print {
+  html, body, * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  body::before {
+    content: "Contenido no disponible para impresión.";
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+ 
+/* 4. Si JavaScript está desactivado, oculta todo el contenido */
+html.no-js body {
+  display: none !important;
+}
+ 
