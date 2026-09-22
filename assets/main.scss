@@ -1,65 +1,23 @@
---
+---
 ---
 @import "minima";
- 
-/* ==========================================
-   PROTECCIÓN GLOBAL ANTI-COPIA E IMPRESIÓN
-   ========================================== */
- 
-/* 1. Bloqueo de selección de texto en toda la web (heredado por defecto) */
-* {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
-}
- 
-/* 2. Protección de imágenes contra arrastre, guardado y menú contextual táctil */
-img {
-  -webkit-user-drag: none !important;
-  -khtml-user-drag: none !important;
-  -moz-user-drag: none !important;
-  -o-user-drag: none !important;
-  -webkit-touch-callout: none !important;
-  pointer-events: none !important;
-}
- 
-/* 3. Bloqueo total de impresión / guardado a PDF (Ctrl+P) */
-@media print {
-  html, body, * {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-  body::before {
-    content: "Contenido no disponible para impresión.";
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-}
- 
-/* 4. Si JavaScript está desactivado, oculta todo el contenido */
-html.no-js body {
-  display: none !important;
-}
- 
-/* ==========================================
-   ESTILOS EXISTENTES
-   ========================================== */
- 
-/* Ocultar el texto de suscripción RSS */
+
+/* 1. Ocultar el texto de suscripción RSS */
 .feed-subscribe,
 p.feed-subscribe,
 a[href*="feed.xml"] {
   display: none !important;
 }
- 
-/* Adaptación de la tabla a móvil vertical */
+
+/* 2. Adaptación de la tabla a móvil vertical */
 @media screen and (max-width: 600px) {
   table.responsive-footer-table,
   table.responsive-footer-table tbody,
-  table.responsive-footer-table tr,
+  table.responsive-footer-table tr {
+    display: block !important;
+    width: 100% !important;
+  }
+
   table.responsive-footer-table td.col-left,
   table.responsive-footer-table td.col-right {
     display: block !important;
@@ -67,8 +25,8 @@ a[href*="feed.xml"] {
     padding: 0 !important;
   }
 }
- 
-/* FONDO TOPOGRÁFICO UNIFICADO (PC Y MÓVIL) */
+
+/* 3. FONDO TOPOGRÁFICO UNIFICADO (PC Y MÓVIL) */
 body {
   background-color: #ffffff !important;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'%3E%3Cg fill='none' stroke='%238a4939' stroke-width='1.2' opacity='0.28'%3E%3Cpath d='M1000,120 C950,110 920,80 1000,40'/%3E%3Cpath d='M1000,180 C910,160 860,110 1000,60'/%3E%3Cpath d='M1000,240 C870,210 800,140 1000,80'/%3E%3Cpath d='M1000,300 C830,260 740,170 1000,100' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M1000,360 C790,310 680,200 1000,120'/%3E%3Cpath d='M1000,420 C750,360 620,230 1000,140'/%3E%3Cpath d='M1000,480 C710,410 560,260 1000,160'/%3E%3Cpath d='M1000,540 C670,460 500,290 1000,180' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M1000,600 C630,510 440,320 1000,200'/%3E%3Cpath d='M1000,660 C590,560 380,350 1000,220'/%3E%3Cpath d='M1000,720 C550,610 320,380 1000,240'/%3E%3Cpath d='M1000,780 C510,660 260,410 1000,260' stroke-width='1.8' opacity='0.4'/%3E%3Cpath d='M1000,840 C470,710 200,440 1000,280'/%3E%3Cpath d='M1000,900 C430,760 140,470 1000,300'/%3E%3Cpath d='M1000,960 C390,810 80,500 1000,320'/%3E%3C/g%3E%3C/svg%3E") !important;
@@ -77,26 +35,8 @@ body {
   background-size: 850px auto !important;
   background-attachment: fixed !important;
 }
- 
+
 /* Transparencia para que la estructura de Minima deje ver las isolíneas en PC */
 .site-header, .site-footer, .page-content, .wrapper {
   background-color: transparent !important;
-}
- 
-/* Marca de agua invisible antiscraping */
-.post-content, article {
-  position: relative;
-}
- 
-.post-content::after {
-  content: "© FABIO REGOLF - PROHIBIDA LA REPRODUCCIÓN - FLOGER17.GITHUB.IO ";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  pointer-events: none;
-  opacity: 0.06;
-  font-size: 14px;
-  line-height: 30px;
-  word-spacing: 20px;
-  overflow: hidden;
-  user-select: none;
 }
