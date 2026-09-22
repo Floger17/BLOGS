@@ -156,7 +156,7 @@ Más allá de la geodesia y el software, el trabajo de campo en entornos rurales
   </figcaption>
 </figure>
 
-Sin ninguna duda, un gesto sencillo y que, alegra el día para afrontar los siguientes levantamientos. Y como anécdota, mencionar que ante la curiosidad propia de algunos vecinos al ver un instrumento extraño y tras explicar el objetivo de nuestra presencia en sus tranquilos pueblos, alguno que otro nme preguntó si era del ayuntamiento, o si se iba a construir algo... de todo, y siempre, todos ellos, siempre respetaron nuestra presencia, nuestra labor, y nos facilitaban cosas o se ofrecían a ayudarnos sin malas caras y con una buena sonrisa. Una bonita experiencia, que incluso, me recuerda, a la buena voluntad d la gente, incluso en situaciones como en la DANA del 29 de octubre en Valencia cuando me ayudaban los vecinos en lo que podían para que hiciera mis labores topográficas.
+Sin ninguna duda, un gesto sencillo y que, alegra el día para afrontar los siguientes levantamientos. Y como anécdota, mencionar que ante la curiosidad propia de algunos vecinos al ver un instrumento extraño y tras explicar el objetivo de nuestra presencia en sus tranquilos pueblos, alguno que otro nme preguntó si era del ayuntamiento, o si se iba a construir algo... de todo, y siempre, todos ellos, siempre respetaron nuestra presencia, nuestra labor, y nos facilitaban cosas o se ofrecían a ayudarnos sin malas caras y con una buena sonrisa. Una bonita experiencia, que incluso, me recuerda, a la buena voluntad d la gente, incluso en situaciones como en la [DANA del 29 de octubre en Valencia]({% post_url 2024-11-05-topografia-al-rescate %}) cuando me ayudaban los vecinos en lo que podían para que hiciera mis labores topográficas.
 
 ---
 
