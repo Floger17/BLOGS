@@ -164,3 +164,71 @@ Primero, una vez ya está el `.gpkg` de QGIS con toda la información, tablas y 
 Como el archivo `.gpkg` y el `.html` están listos para entrar en comunión, toca tal vez, el paso más importante y en el que hay que andarse con mucho cuidado y consideración, ya que, en este apartado, la joya es el plano de QGIS y hay que integrarlo a un html, entonces, aparte de ir con pies de plomo, hay que aplicar la mente nuevamente de un ingeniero y entendiendo lo que se hace.
 
 En sí, un `.gpkg` tiene un estándar OGC (*Open Geospatial Consortium*), es decir, una base de datos SQLite con tablas normalizadas, con una tabla por capa. Pero, dada mi inexperiencia y errores típicos de novato, en lugar de hacerlo sencillo con las librerías de GeoPandas, fiona,  pero, típico error de novato, en lugar de hacerlo sencillo y cómodo, en lugar de tener el geoPandas, o  pero sin GDAL (*Geospatial Data Abstraction Library*) ni las librería de fiona y geopandas para python, sino que lo hice con las librerías las cuales son propias y naturales de python, como…  
+
+
+En sí, un `.gpkg` tiene un estándar OGC (*Open Geospatial Consortium*), es decir, una base de datos SQLite con tablas normalizadas, con una tabla por capa. Pero, dada mi inexperiencia y errores típicos de novato, en lugar de hacerlo sencillo con las librerías de GeoPandas, fiona,  pero, típico error de novato, en lugar de hacerlo sencillo y cómodo, en lugar de tener el geoPandas, o  pero sin GDAL (*Geospatial Data Abstraction Library*) ni las librería de fiona y geopandas para python, sino que lo hice con las librerías las cuales son propias y naturales de python, sino que lo hice con las librerías las cuales son propias y naturales de Python, como sqlite3 y struct. Nada de instalar nada, nada de depender de GDAL (Geospatial Data Abstraction Library) ni de ninguna otra cosa ajena a lo que Python ya trae de serie.
+
+Y es que, pensándolo bien, un GeoPackage no deja de ser una base de datos SQLite con una extensión encima, así que lo primero que hice fue precisamente eso: tratarlo como lo que es, una base de datos, y preguntarle educadamente qué guarda dentro antes de dar nada por supuesto. Con una consulta a la tabla gpkg_contents me contestó con el catálogo completo de capas: habitaciones, `POLVO`, `MOPA`, `MOCHO`, `BARRER`, `ASPIRADORA`, y las de referencia (`PAREDES`, `PUERTAS`, `VENTANAS`, `PILARES`, `ARMARIOS`), todas en EPSG:25830, que es justo el sistema de referencia con el que había georreferenciado la nube de puntos capítulos atrás. Un primer alivio: la cadena de custodia del dato se mantenía intacta desde el SLAM hasta aquí.
+
+Antes de ponerme a extraer geometría, miré los valores reales de las cinco capas de tareas (`POLVO`, `MOPA`...). Las once habitaciones aparecían repetidas en cada una de ellas, pero con los campos de residente, hora de inicio y hora de fin completamente vacíos. Mi primera tentación fue pensar que ahí estaba el reparto de quién hace qué en cada estancia, pero los datos no mentían: eran plantillas de registro, no un reparto. Así que, en vez de forzar una lectura automática que los propios datos no respaldaban, seguí tirando del reparto manual que ya tenía construido a mano en el `.html`. A veces el criterio de ingeniero no es sacarle más partido al dato, sino reconocer cuándo el dato no dice lo que uno querría que dijera.
+
+Con la tabla habitaciones sí tocaba mancharse las manos de verdad. Cada celda de la columna geom no es WKB puro —el formato estándar para describir geometría—, sino que viene envuelto en una cabecera propia del estándar GeoPackage, lo que se llama GeoPackage Binary (GPB): un número mágico, una versión, un byte de flags que indica el orden de los bytes y si hay una envolvente (bounding box) calculada de antemano, el identificador del sistema de referencia, y opcionalmente esa misma envolvente. Decodificar ese byte de flags, bit a bit, no es opcional: de él depende saber cuántos bytes hay que saltarse antes de llegar al WKB real. Si el cálculo del desplazamiento (offset) sale mal, la geometría sale corrupta.
+
+#### Dudas (otra vez)
+Y salió corrupta, la primera vez que lo intenté. Los puntos me venían con coordenadas X sueltas en cero, un patrón que a cualquiera con un mínimo de experiencia en parseo binario le huele raro de inmediato. Volqué el bloque de bytes en hexadecimal y até cabos: el tipo de geometría que estaba leyendo no era el 3 que corresponde a un Polygon normal, sino el 1003. En el estándar WKB extendido, sumarle 1000 al tipo base significa que la geometría lleva coordenada Z —cada vértice no traía dos números (X, Y), sino tres (X, Y, Z)—, y QGIS, en su interfaz, lo mostraba como POLYGON a secas, sin avisar de que por debajo había una Z escondida. Yo estaba leyendo de dieciséis en dieciséis bytes cuando tocaba leer de veinticuatro en veinticuatro, así que cada punto se desincronizaba del siguiente.
+
+Me hizo gracia, al caer en la cuenta, porque es exactamente el mismo patrón que ya me encontré con el flexómetro y los 32 cm frente a los 31,77 cm de ReCap: el dato en sí estaba bien, lo que fallaba era mi suposición sobre su formato. El buen criterio de ingeniero no es solo saber medir, es también saber dudar de la propia medida antes de dudar del instrumento.
+Con eso corregido, cada una de las once habitaciones quedó convertida en una lista de vértices (X, Y) en metros, en el mismo ETRS89 / UTM 30N, EPSG:25830 de todo el proyecto. Las mismas coordenadas, exactamente, que leería el cursor de QGIS puesto sobre esa esquina de muro.
+
+### De metros UTM a píxeles SVG
+Tener los vértices en metros reales no sirve de nada dentro de un `.svg` si no se reescalan a su sistema de coordenadas propio, que crece al revés que el cartográfico. Apliqué una transformación afín sencilla, pero con un par de decisiones que no son triviales:
+
+Escala uniforme, no una por eje. Si hubiera escalado X e Y con factores distintos para aprovechar mejor el lienzo, habría deformado los ángulos reales del plano: un dormitorio rectangular habría dejado de parecer rectangular. Se toma el mínimo de los dos factores posibles, para que un metro real mida exactamente lo mismo en los dos ejes del SVG.
+
+Centrado del dibujo, repartiendo a partes iguales el margen que sobra en el eje donde la proporción de la vivienda no coincide con la del lienzo.
+E inversión del eje Y. En UTM, Y crece hacia el norte; en SVG, Y crece hacia abajo, como en cualquier sistema de coordenadas de pantalla. Sin ese volteo, el plano habría salido reflejado, como mirado en un espejo.
+
+Esos mismos parámetros de la transformación los guardé dentro del propio .html, porque la misma fórmula, aplicada al revés, es la que usa el visor para traducir en tiempo real la posición del cursor sobre el plano a coordenadas UTM reales. La misma transformación, recorrida en los dos sentidos.
+
+Y el último paso ya es trivial: formatear esos vértices como el `points="x1,y1 x2,y2 ...`" que entiende un `<polygon>`> de SVG, y pegar el resultado directamente en la estructura de datos que ya tenía construida en el .html. Sin pasar por GeoJSON, sin ningún formato de texto intermedio de por medio: del binario de SQLite al SVG, en un único proceso, sin fugas de precisión por el camino.
+
+
+### Del archivo local a la Nube: Publicación con Firebase Hosting
+En este punto del camino, ya teníamos un archivo .html perfectamente funcional en local. Si lo abrías en el navegador del portátil, el plano SVG interactivo se mostraba con precisión milimétrica y las tareas se podían marcar. Sin embargo, seguía teniendo el mismo problema de fondo que un archivo CAD o un PDF: solo vivía en mi ordenador.
+
+Si quería que el usuario final (o un operario en campo) pudiera abrir la aplicación en su teléfono móvil sin instalar nada, necesitaba transformar ese archivo local en una Web App pública sobre HTTPS.
+
+Para ello utilicé Google Firebase Hosting, sencilla, rápida y con xertificado SSL (HTTPS) ppr defecto, era lo mejor para lo que buscaba.
+La elección no fue casual. Firebase proporciona una infraestructura de producción gratuita, ultrarrápida y con certificado SSL (HTTPS) por defecto, algo indispensable para que los navegadores móviles ejecuten scripts sin bloqueos de seguridad.
+El flujo para poner el proyecto en la red fue sorprendentemente limpio:
+
+- **Vinculación:** Mediante la consola de comandos (*firebase init*), conecté la carpeta de mi proyecto local con mi servidor en Firebase.
+
+- **Despliegue:** Cada vez que realizo un ajuste o mejora en el código index.html, solo hace falta lanzar una orden en la terminal:
+En cuestión de segundos, los servidores de Google compilan y distribuyen el archivo, generando un enlace público bajo el dominio .web.app. Con esto, el plano pasó de ser un archivo en mi disco duro a una aplicación accesible desde cualquier navegador del mundo.
+
+## El reto final: Sincronización multi-dispositivo en tiempo real con JSONBin
+
+Tener la web publicada en internet solucionaba la accesibilidad, pero abrió el último gran desafío del proyecto: la persistencia y la sincronización.
+
+Si abrías la web en el móvil y marcabas una habitación como "*limpia*", esa información se guardaba de forma nativa en el navegador del teléfono (*localStorage*). Pero si alguien abría la web desde el ordenador o desde otro móvil, no veía absolutamente nada de lo que se había hecho. Eran dos mundos aislados.
+
+El almacenamiento local no basta cuando buscas trabajo colaborativo. Para resolver esto sin meterme en la complejidad de levantar una base de datos pesada o un servidor propio, integré una API pública de almacenamiento remoto: JSONBin.io.
+
+*¿Cómo funciona la arquitectura por dentro?*
+Diseñé un patrón de lectura y escritura en JavaScript (loadLog y saveLog) basado en tres pilares:
+
+Lectura remota y fusión de datos (GET / Merge): Cada vez que la aplicación se inicia o consulta la nube, realiza una petición HTTP a JSONBin. Descarga el estado global guardado en la nube y lo dibuja en pantalla.
+
+- **Escritura inmediata (PUT):** En el momento en que un usuario interactúa con el plano (por ejemplo, al marcar una tarea en una habitación), el código actualiza el estado local para que la respuesta de la pantalla sea instantánea y, acto seguido, envía una petición PUT a la API de JSONBin con el nuevo objeto JSON fusionado.
+
+- **Polleo e intervalos de refresco:** Para que el portátil "se entere" de lo que se hace en el móvil sin necesidad de recargar la página, la web consulta la nube periódicamente mediante un intervalo de refresco (setInterval cada 5 segundos). Si detecta un cambio realizado por otro dispositivo, vuelve a renderizar el mapa SVG al instante.
+
+- **Respaldo offline:** Si la cobertura falla en el teléfono móvil durante la toma de datos, la app recurre automáticamente al localStorage de emergencia, garantizando que el usuario no pierda información mientras recupera la conexión.
+
+## Conclusión: El valor real de ser "el dueño del dato"
+Con este último paso, el ciclo se cierra por completo.
+
+Hemos partido de un plano en papel y una pasada con escáner SLAM, hemos cuidado la geometría pasando por CloudCompare, ReCap, Revit y AutoCAD, le hemos dado rigor geoespacial en QGIS extrayendo sus entrañas binarias desde un GeoPackage, y finalmente lo hemos transformado en una Web App sincronizada en tiempo real mediante Firebase y JSONBin.
+
+Lo valioso de esta experiencia no es solo la tecnología utilizada, sino el cambio de mentalidad. Pasar del tradicional Scan to BIM o Scan to GIS al "Scan to Web App" demuestra que los profesionales de la Geomática y la Topografía podemos ir mucho más allá de entregar una nube de puntos o un plano estático. Podemos ser los dueños de la cadena de custodia del dato desde su captura física en campo hasta su explotación interactiva en la palma de la mano del cliente final.
