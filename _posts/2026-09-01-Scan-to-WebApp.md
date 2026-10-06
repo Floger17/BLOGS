@@ -5,7 +5,7 @@ date: 01/09/2026
 image: /assets/img/SLAM4.jpg  
 ---
 
-<style\> /\* Justifica todos los párrafos y listas del artículo \*/ main p, main ul, main ol { text-align: justify; } /\* Mantiene el pie de foto centrado \*/ figcaption { text-align: center \!important; } \<style\>
+<style> /* Justifica todos los párrafos y listas del artículo */ main p, main ul, main ol { text-align: justify; } /* Mantiene el pie de foto centrado */ figcaption { text-align: center !important; } </style>
 
 En esta entrada, se abordará algo que cada vez se hace oír más o que está más de moda, como lo es el llamado “Scan to BIM” pero, aquí se pretenderá, y siempre desde la humildad de mi posición, darle una vuelta y otro enfoque final al dato capturado, y hablar de algo llamado “Scan to GIS”, y de esto, pasarlo a una app web en lugar de quedarse con un BIM que requiere de un formato específico para softwares propios para BIM. En esta entrada, será la explicación de cómo, se la da sentido y valor al dato capturado, porque, escanear es algo sencillo si uno tiene conocimientos técnicos básicos, pero no muchos alcanzan a darle un rigor, un valor y significado a ese dato, se va a ver cómo se captura el dato y cómo cuidamos al dato hasta convertirlo en algo útil. 
 
