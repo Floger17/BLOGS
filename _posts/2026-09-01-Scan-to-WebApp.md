@@ -2,7 +2,7 @@
 layout: post  
 title: "Scan to GIS y web.app"  
 date: 01/09/2026  
-image: /assets/img/SLAM4.jpg  
+image: /assets/img/PortalIDE.png  
 ---
 
 <style> /* Justifica todos los párrafos y listas del artículo */ main p, main ul, main ol { text-align: justify; } /* Mantiene el pie de foto centrado */ figcaption { text-align: center !important; } </style>
