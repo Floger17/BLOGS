@@ -11,7 +11,7 @@ En esta entrada, se abordará algo que cada vez se hace oír más o que está m�
 
 Tal vez, sea una de las entradas de este blog donde se van a juntar muchas cosas y en esta entrada, se juntarán todas ellas, tanto conocimientos adquiridos como experiencias en mis prácticas en empresas, como lo es el manejo de QField gracias a mi experiencia en el proyecto de la DANA, o un vocabulario de edificación en una de mis prácticas en empresas, o el manejo del SLAM en la última empresa que he estado junto a lo que sé manejarme por cuenta propia, como cosas que de este miniproyecto personal, he tenido que aprender.
 
-La finalidad es una chorrada, pero la idea creo, desde mi humilde posición, puede ser interesante si se extrapola a otros sectores. en este caso, a modo de ahogar el aburrimiento, se tratará de hacer una web.app de una vicienda enfocada a la organización de tareas domésticas como fregar el suelo, barrer, pasar la mopa, poner la aspiradora... etc...
+La finalidad es una chorrada, pero la idea creo, desde mi humilde posición, puede ser interesante si se extrapola a otros sectores de la ingeniería, pero dado los escasos recursos y tiempo, en este caso a modo de ahogar el aburrimiento, se tratará de hacer una web.app de una vivienda enfocada a la organización de tareas domésticas como fregar el suelo, barrer, pasar la mopa, poner la aspiradora... etc...
 
 Para ello, se han utilizado los siguientes instrumentos y material de partida: 
 
