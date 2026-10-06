@@ -23,7 +23,7 @@ Se procede a explicar en detalle cada uno de los pasos realizados y en orden del
 
 Sí, efectivamente, pese a estar en la era digital, el plano en papel nunca debe fallar y siempre es un fiel compañero para cuando lo digital falla, es siempre el mejor compañero del arquitecto y del ingeniero, nunca defrauda.
 
-Gracias a que ya tenía de antemano el plano de la en papel, sirve para, quitando los muebles, dibujar en el plano el itinerario, y de manera que se diseña de manera aproximada dónde se va a tomar punto de control con el SLAM buscando siempre una geometría óptima y eficiente para su itinerario.
+Gracias a que ya tenía de antemano el plano de la vivienda en papel, sirve para, quitando los muebles, dibujar en el plano el itinerario, y de manera que se diseña de manera aproximada dónde se va a tomar punto de control con el SLAM buscando siempre una geometría óptima y eficiente para su itinerario.
 
 ## Scan to GIS
 
