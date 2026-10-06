@@ -1,8 +1,8 @@
 ---  
 layout: post  
-title: "Scan to GIS y web.app"  
+title: "Scan to webGIS"  
 date: 01/09/2026  
-image: /assets/img/PortalIDE.png  
+image: /assets/img/Portada_entrada2.png  
 ---
 
 <style> /* Justifica todos los párrafos y listas del artículo */ main p, main ul, main ol { text-align: justify; } /* Mantiene el pie de foto centrado */ figcaption { text-align: center !important; } </style>
