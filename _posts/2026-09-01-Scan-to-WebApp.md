@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Scan to webGIS, la democratización del dato"  
+title: "Scan to WebGIS, la democratización del dato"  
 date: 01/09/2026  
 image: /assets/img/Portada_entrada2.png  
 ---
